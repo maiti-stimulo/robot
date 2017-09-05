@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<robot name="week_1">
+
+  <link name="wheel_1">
+    <visual>
+      <geometry>
+        <cylinder length="0.01" radius="0.0675"/>
+      </geometry>
+      <origin rpy="0 1.57075 0" xyz="-0.238 0 0.0675"/>
+      <color rgba="0 0 0.8 1"/>
+    </visual>
+  </link>
+
+    <link name="wheel_2">
+    <visual>
+      <geometry>
+        <cylinder length="0.01" radius="0.0675"/>
+      </geometry>
+      <origin rpy=" 0 1.57075 -1.047197" xyz="0.115 -0.199 0.0675"/>
+      <color rgba="1 1 1 1"/>
+    </visual>
+  </link>
+
+ <joint name="wheel1_to_wheel_2" type="continuous">
+    <parent link="wheel_1"/>
+    <child link="wheel_2"/>
+    <axis xyz="0 1.57075 0"/>
+    <origin xyz="0 0 0.0675"/>
+  </joint>
+
+     <link name="wheel_3">
+    <visual>
+      <geometry>
+        <cylinder length="0.01" radius="0.0675"/>
+      </geometry>
+      <origin rpy=" 0 1.57075 1.047197" xyz="0.115 0.199 0.0675"/>
+      <color rgba="1 1 1 1"/>
+    </visual>
+  </link>
+
+   <joint name="wheel1_to_wheel_3" type="continuous">
+    <parent link="wheel_1"/>
+    <child link="wheel_3"/>
+    <axis xyz="0 -1.57075 0"/>
+    <origin xyz="0 0 0.0675"/>
+  </joint>
+
+
+</robot>
+
+

@@ -1,0 +1,18 @@
+<package>
+  <name>robot</name>
+  <version>0.3.0</version>
+
+  <description>Robot terrestre desplaçat mitjancat helix.</description>
+  <author email="maiti@stimulo.com">Maiti</author>
+
+  <maintainer email="maiti@stimulo.com.com">maiti</maintainer>
+
+  <license>ToDo</license>
+   <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>roslaunch</build_depend>
+  <run_depend>joint_state_publisher</run_depend>
+  <run_depend>robot_state_publisher</run_depend>
+  <run_depend>rviz</run_depend>
+  <run_depend>xacro</run_depend>
+
+</package>
