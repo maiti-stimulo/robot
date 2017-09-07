@@ -2,12 +2,15 @@
 #03/09/17
 roslaunch urdf_tutorials week_2.launch
 
-He estat treballant amb URDF, i ja tinc tota la roda muntada, necessitaria tenir un parell de conceptes clars ja que dubto de dos coses. com definir axis, i com definir el seu origen.
+He estat treballant amb URDF, i ja tinc tota la roda muntada, necessitaria tenir un parell de conceptes clars ja que dubto de dos coses. Com definir axis, i com definir el seu origen.
+Quan els eixos son verticals les coordenades son més fàcils de definir, però com ho faig en el cas d'estar a 45º?
+> ![omniwheel](images/week_2_3.jpg)
+
 Un cop tingui aixó solucionat. Com ho puc fer per replicar la roda que ja tinc feta? 
 Adjunto imatge de l'estat de la roda.
 > ![omniwheel](images/week_2_1.png)
 
-Per cert no se com fer-ho per treure aquest balnc nuclear i poder aplicar altres colors.
+Per cert no se com fer-ho per treure aquest blanc nuclear i poder aplicar altres colors.
 
 
 
@@ -23,4 +26,4 @@ Em fa un error en el base frame, quan indico un base frame em fa una cosa rara i
 
 
 > ![base_wheel_1](images/week_1_2.png) 
-# urdf_tutorial
+# robot
