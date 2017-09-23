@@ -5,9 +5,9 @@
     <visual>
       <origin rpy="1.57075 0 0" xyz="-0.238 0 0.06250"/>
       <geometry>
-        <mesh filename="package://urdf_tutorial/meshes/omniwheel.stl"/>
-      </geometry>  
-      <color rgba="0 0 0.8 1"/>
+        <mesh filename="package://robot/meshes/omniwheel.stl"/>
+      </geometry>       
+          <color rgba="1 0 0 1.0"/> 
     </visual>
   </link>
 
@@ -15,9 +15,11 @@
     <visual>
       <origin rpy="0 0 0" xyz="-0.238 0 0.01"/>
       <geometry>
-        <mesh filename="package://urdf_tutorial/meshes/rodeta.stl"/>
+        <mesh filename="package://robot/meshes/rodeta.stl"/>
       </geometry>  
-      <color rgba="${255/255} ${108/255} ${10/255} 1.0"/>
+      <material name="Cyan">
+          <color rgba="0 1.0 1.0 1.0"/>
+      </material>    
     </visual>
   </link>
 
@@ -34,7 +36,7 @@
     <visual>
       <origin rpy="-0.785398 0 0" xyz="-0.238 -0.03712 0.02538"/>
       <geometry>
-        <mesh filename="package://urdf_tutorial/meshes/rodeta.stl"/>
+        <mesh filename="package://robot/meshes/rodeta.stl"/>
       </geometry>  
       <color rgba="0 0 0 1"/>
     </visual>
@@ -53,7 +55,7 @@
     <visual>
       <origin rpy="-1.570796 0 0" xyz="-0.238 -0.05250 0.06250"/>
       <geometry>
-        <mesh filename="package://urdf_tutorial/meshes/rodeta.stl"/>
+        <mesh filename="package://robot/meshes/rodeta.stl"/>
       </geometry>  
       <color rgba="0 0 0 1"/>
     </visual>
@@ -72,7 +74,7 @@
     <visual>
       <origin rpy="-2.35619 0 0" xyz="-0.238 -0.03712 0.09962"/>
       <geometry>
-        <mesh filename="package://urdf_tutorial/meshes/rodeta.stl"/>
+        <mesh filename="package://robot/meshes/rodeta.stl"/>
       </geometry>  
       <color rgba="0 0 0 1"/>
     </visual>
@@ -91,7 +93,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="-0.238 0 0.115"/>
       <geometry>
-        <mesh filename="package://urdf_tutorial/meshes/rodeta.stl"/>
+        <mesh filename="package://robot/meshes/rodeta.stl"/>
       </geometry>  
       <color rgba="0 0 0 1"/>
     </visual>
@@ -110,7 +112,7 @@
     <visual>
       <origin rpy="2.35619 0 0" xyz="-0.238 0.03712 0.09962"/>
       <geometry>
-        <mesh filename="package://urdf_tutorial/meshes/rodeta.stl"/>
+        <mesh filename="package://robot/meshes/rodeta.stl"/>
       </geometry>  
       <color rgba="0 0 0 1"/>
     </visual>
@@ -129,7 +131,7 @@
     <visual>
       <origin rpy="1.570796 0 0" xyz="-0.238 0.05250 0.06250"/>
       <geometry>
-        <mesh filename="package://urdf_tutorial/meshes/rodeta.stl"/>
+        <mesh filename="package://robot/meshes/rodeta.stl"/>
       </geometry>  
       <color rgba="0 0 0 1"/>
     </visual>
@@ -149,7 +151,7 @@
     <visual>
       <origin rpy="0.785398 0 0" xyz="-0.238 0.03712 0.02538"/>
       <geometry>
-        <mesh filename="package://urdf_tutorial/meshes/rodeta.stl"/>
+        <mesh filename="package://robot/meshes/rodeta.stl"/>
       </geometry>  
       <color rgba="0 0 0 1"/>
     </visual>

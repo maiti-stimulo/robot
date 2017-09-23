@@ -4,7 +4,7 @@ roslaunch urdf_tutorials week_2.launch
 
 He estat treballant amb URDF, i ja tinc tota la roda muntada, necessitaria tenir un parell de conceptes clars ja que dubto de dos coses. Com definir axis, i com definir el seu origen.
 Quan els eixos son verticals les coordenades son més fàcils de definir, però com ho faig en el cas d'estar a 45º?
-> ![omniwheel](images/week_2_3.jpg)
+> ![omniwheel](images/week_2_3.png)
 
 Un cop tingui aixó solucionat. Com ho puc fer per replicar la roda que ja tinc feta? 
 Adjunto imatge de l'estat de la roda.

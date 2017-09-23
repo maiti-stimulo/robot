@@ -1,0 +1,144 @@
+<?xml version="1.0"?>
+<robot name="week_3" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <xacro:property name="pi" value="3.141592" />
+    <xacro:property name="c120" value="-0.5" />
+    <xacro:property name="s120" value="0.866025404" />
+        <xacro:property name="c45" value="0.707106781" />
+    <xacro:property name="s45" value="0.707106781" />
+
+
+<xacro:macro name="omniwheel" params="name parent *origin">
+  <joint name="${name}" type="continuous" >
+    <parent link="${parent}"/>
+    <child link="${name}_frame"/>
+    <xacro:insert_block name="origin"/>
+    <axis xyz="1 0 0"/>
+    <limit effort="100000." velocity="${2*pi}"/>
+    <dynamics friction="0.01" damping="0.001"/>
+  </joint>
+
+
+    <link name="${name}_frame">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://robot/meshes/omniwheel.stl"/>
+      </geometry>
+      <color rgba="0 0 0.8 1"/>
+    </visual>
+  </link>
+
+  <joint name="${name}_rodeta_1_joint" type="continuous">
+    <parent link="${name}_frame"/>
+    <child link="${name}_rodeta_1"/>
+    <axis xyz="0 1 0"/>
+    <origin xyz="0 0 ${0.0525}" rpy="0 0 0"/>
+  </joint>
+  <link name="${name}_rodeta_1">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://robot/meshes/rodeta.stl"/>
+      </geometry>
+      <material name="green_rodeta">
+        <color rgba="${0/255} ${108/255} ${0/255} 1.0"/>
+      </material>
+    </visual>
+  </link>
+
+  <joint name="${name}_rodeta_2_joint" type="continuous">
+    <parent link="${name}_frame"/>
+    <child link="${name}_rodeta_2"/>
+    <axis xyz="0 1 0"/>
+    <origin xyz="0 0 ${-0.0525}" rpy="0 0 0"/>
+  </joint>
+  <link name="${name}_rodeta_2">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://robot/meshes/rodeta.stl"/>
+      </geometry>
+      <material name="green_rodeta">
+        <color rgba="${0/255} ${108/255} ${0/255} 1.0"/>
+      </material>
+    </visual>
+  </link>
+
+  <joint name="${name}_rodeta_3_joint" type="continuous">
+    <parent link="${name}_frame"/>
+    <child link="${name}_rodeta_3"/>
+    <axis xyz="0 1 0"/>
+    <origin xyz="0 ${c45*0.0525} ${s45*0.0525}" rpy="${-45*pi/180} 0 0"/>
+  </joint>
+  <link name="${name}_rodeta_3">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://robot/meshes/rodeta.stl"/>
+      </geometry>
+      <material name="green_rodeta">
+        <color rgba="${0/255} ${108/255} ${0/255} 1.0"/>
+      </material>
+    </visual>
+  </link>
+
+
+</xacro:macro>
+
+
+<link name="base" />
+
+<xacro:omniwheel name="MY_WHEEL_ONE" parent="base">
+  <origin xyz="0.238 0 0" rpy="0 0 0" />
+</xacro:omniwheel>
+<xacro:omniwheel name="MY_WHEEL_TWO" parent="base">
+  <origin xyz="${0.238*c120} ${0.238*s120} 0" rpy="0 0 ${120*pi/180}"/>
+</xacro:omniwheel>
+<xacro:omniwheel name="MY_WHEEL_THREE" parent="base">
+  <origin xyz="${0.238*c120} ${-1*0.238*s120} 0" rpy="0 0 ${-120*pi/180}"/>
+</xacro:omniwheel>
+
+  <joint name="rev1" type="revolute" >
+    <parent link="base"/>
+    <child link="fake_link"/>
+     <origin xyz="0 0 0.01" rpy="0 0 ${-120*pi/180}"/>
+    <axis xyz="1 0 0"/>
+    <limit effort="100000." velocity="${2*pi}"/>
+    <dynamics friction="0.01" damping="0.001"/>
+  </joint>
+
+<link name="fake_link" />
+
+  <joint name="rev2" type="revolute" >
+    <parent link="fake_link"/>
+    <child link="motor_frame"/>
+     <origin xyz="0 0 0.01" rpy="0 0 ${-120*pi/180}"/>
+    <axis xyz="1 0 0"/>
+    <limit effort="100000." velocity="${2*pi}"/>
+    <dynamics friction="0.01" damping="0.001"/>
+  </joint>
+
+<link name="motor_frame" /> <!-- pot ser un mesh amb la geometria dels dos motors -->
+
+  <joint name="motor1" type="continuous" >
+    <parent link="motor_frame"/>
+    <child link="helix1"/>
+     <origin xyz="0 0 0.01" rpy="0 0 ${-120*pi/180}"/>
+    <axis xyz="1 0 0"/>
+    <limit effort="100000." velocity="${2*pi}"/>
+    <dynamics friction="0.01" damping="0.001"/>
+  </joint>
+<link name="helix1" /> 
+
+
+  <joint name="motor2" type="continuous" >
+    <parent link="motor_frame"/>
+    <child link="helix2"/>
+     <origin xyz="0 0 0.01" rpy="0 0 ${-120*pi/180}"/>
+    <axis xyz="1 0 0"/>
+    <limit effort="100000." velocity="${2*pi}"/>
+    <dynamics friction="0.01" damping="0.001"/>
+  </joint>
+<link name="helix2" /> 
+</robot>
