@@ -1,4 +1,4 @@
-# urdf_tutorial
+# robot
 #03/09/17
 roslaunch urdf_tutorials week_2.launch
 
@@ -26,4 +26,4 @@ Em fa un error en el base frame, quan indico un base frame em fa una cosa rara i
 
 
 > ![base_wheel_1](images/week_1_2.png) 
-# robot
+

@@ -1,4 +1,15 @@
 # robot
+#22/09/17
+roslaunch urdf_tutorials week_3.launch
+
+> ![omniwheel](images/week_3.png)
+
+Ja tinc tot URDF construït, però com sempre surten coses, quan estic treballant amb els volums de colisió, veure els de les rodes, no hi ha manera de que quedin en posició, encara en queden per possar, per cert tb hi veuràs els moments inercia i els pesos.
+
+> ![omniwheel](images/week_3_1.png)
+
+Si et va bé de fer-hi un cop d'ull aquesta setmana perfecte.
+
 #03/09/17
 roslaunch urdf_tutorials week_2.launch
 
