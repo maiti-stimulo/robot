@@ -23,13 +23,26 @@
 
     <link name="${name}_frame">
     <visual>
-      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <origin  xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
         <mesh filename="package://robot/meshes/omniwheel.stl"/>
       </geometry>
-      <color rgba="0 0 0.8 1"/>
+      <material name="gris_llanta">
+        <color rgba="${192/255} ${192/255} ${192/255} 1.0"/>
+      </material>
     </visual>
+     <collision>
+           <origin xyz="0 0 0" rpy="0 1 0"/>   <!-- el disc de colisio surt inclinat -->
+       <geometry>
+         <cylinder length="0.01" radius="0.0675"/>
+       </geometry>
+       </collision>
+     <inertial>
+      <mass value="0.04"/>
+      <inertia ixx="0.00007188" ixy="0.00" ixz="0.0" iyy="0.00003635" iyz="0.0" izz="0.00003635"/>
+     </inertial>
   </link>
+
 
   <joint name="${name}_rodeta_1_joint" type="continuous">
     <parent link="${name}_frame"/>
@@ -43,10 +56,19 @@
       <geometry>
         <mesh filename="package://robot/meshes/rodeta.stl"/>
       </geometry>
-      <material name="green_rodeta">
-        <color rgba="${0/255} ${108/255} ${0/255} 1.0"/>
+      <material name="gris_rodeta">
+        <color rgba="${96/255} ${96/255} ${96/255} 1.0"/>
       </material>
     </visual>
+     <collision>
+      <geometry>
+        <mesh filename="package://robot/meshes/rodeta.stl"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.00083"/>
+      <inertia ixx="0.00000075" ixy="0.00" ixz="0.0" iyy="0.00000037" iyz="0.0" izz="0.00000075"/>
+    </inertial>
   </link>
 
   <joint name="${name}_rodeta_2_joint" type="continuous">
@@ -61,10 +83,18 @@
       <geometry>
         <mesh filename="package://robot/meshes/rodeta.stl"/>
       </geometry>
-      <material name="purple_rodeta">
-        <color rgba="${204/255} ${0/255} ${204/255} 1.0"/>
+      <material name="gris_rodeta">
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://robot/meshes/rodeta.stl"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.00083"/>
+      <inertia ixx="0.00000075" ixy="0.00" ixz="0.0" iyy="0.00000037" iyz="0.0" izz="0.00000075"/>
+    </inertial>
   </link>
 
   <joint name="${name}_rodeta_3_joint" type="continuous">
@@ -75,14 +105,23 @@
   </joint>
   <link name="${name}_rodeta_3">
     <visual>
-      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
         <mesh filename="package://robot/meshes/rodeta.stl"/>
       </geometry>
-      <material name="green_rodeta">
+      <material name="gris_rodeta">
         <color rgba="${0/255} ${108/255} ${0/255} 1.0"/>
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://robot/meshes/rodeta.stl"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.00083"/>
+      <inertia ixx="0.00000075" ixy="0.00" ixz="0.0" iyy="0.00000037" iyz="0.0" izz="0.00000075"/>
+    </inertial>
   </link>
 
 <joint name="${name}_rodeta_4_joint" type="continuous">
@@ -97,10 +136,18 @@
       <geometry>
         <mesh filename="package://robot/meshes/rodeta.stl"/>
       </geometry>
-      <material name="purple_rodeta">
-        <color rgba="${204/255} ${0/255} ${204/255} 1.0"/>
+      <material name="gris_rodeta">
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://robot/meshes/rodeta.stl"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.00083"/>
+      <inertia ixx="0.00000075" ixy="0.00" ixz="0.0" iyy="0.00000037" iyz="0.0" izz="0.00000075"/>
+    </inertial>
   </link>
 
   <joint name="${name}_rodeta_5_joint" type="continuous">
@@ -115,10 +162,18 @@
       <geometry>
         <mesh filename="package://robot/meshes/rodeta.stl"/>
       </geometry>
-      <material name="purple_rodeta">
-        <color rgba="${204/255} ${0/255} ${204/255} 1.0"/>
+      <material name="gris_rodeta">
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://robot/meshes/rodeta.stl"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.00083"/>
+      <inertia ixx="0.00000075" ixy="0.00" ixz="0.0" iyy="0.00000037" iyz="0.0" izz="0.00000075"/>
+    </inertial>
   </link>
 
 <joint name="${name}_rodeta_6_joint" type="continuous">
@@ -129,14 +184,22 @@
   </joint>
   <link name="${name}_rodeta_6">
     <visual>
-      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
         <mesh filename="package://robot/meshes/rodeta.stl"/>
       </geometry>
-      <material name="purple_rodeta">
-        <color rgba="${204/255} ${0/255} ${204/255} 1.0"/>
+      <material name="gris_rodeta">
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://robot/meshes/rodeta.stl"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.00083"/>
+      <inertia ixx="0.00000075" ixy="0.00" ixz="0.0" iyy="0.00000037" iyz="0.0" izz="0.00000075"/>
+    </inertial>
   </link>
 
  <joint name="${name}_rodeta_7_joint" type="continuous">
@@ -147,14 +210,22 @@
   </joint>
   <link name="${name}_rodeta_7">
     <visual>
-      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
         <mesh filename="package://robot/meshes/rodeta.stl"/>
       </geometry>
-      <material name="green_rodeta">
-        <color rgba="${0/255} ${108/255} ${0/255} 1.0"/>
+      <material name="gris_rodeta">
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://robot/meshes/rodeta.stl"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.00083"/>
+      <inertia ixx="0.00000075" ixy="0.00" ixz="0.0" iyy="0.00000037" iyz="0.0" izz="0.00000075"/>
+    </inertial>
   </link>
 
     <joint name="${name}_rodeta_8_joint" type="continuous">
@@ -165,14 +236,22 @@
   </joint>
   <link name="${name}_rodeta_8">
     <visual>
-      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
         <mesh filename="package://robot/meshes/rodeta.stl"/>
       </geometry>
-      <material name="green_rodeta">
-        <color rgba="${0/255} ${108/255} ${0/255} 1.0"/>
+      <material name="gris_rodeta">
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://robot/meshes/rodeta.stl"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.00083"/>
+      <inertia ixx="0.00000075" ixy="0.00" ixz="0.0" iyy="0.00000037" iyz="0.0" izz="0.00000075"/>
+    </inertial>
   </link>
 
 
@@ -190,4 +269,112 @@
 <xacro:omniwheel name="MY_WHEEL_THREE" parent="base">
   <origin xyz="${0.238*c120} ${-1*0.238*s120} 0" rpy="0 0 ${-120*pi/180}"/>
 </xacro:omniwheel>
+
+<joint name="rev1" type="revolute" >
+    <parent link="base"/>
+    <child link="fake_link"/>
+    <axis xyz="1 0 0"/>
+    <origin xyz="0 0 0.005432" rpy="0 0 ${90*pi/180}"/>
+    <limit effort="100000" lower="${-45*pi/180}" upper="${45*pi/180}" velocity="${2*pi}"/>
+    <dynamics friction="0.01" damping="0.001"/>
+</joint>
+
+<link name="fake_link" >
+    <visual>
+     <origin xyz="0 0 0" rpy="0 0 0" />
+     <geometry>
+       <cylinder radius="0.01" length="0.05"/>
+     </geometry>
+ <material name="Cyan">
+       <color rgba="0 1.0 1.0 1.0"/>
+     </material>
+   </visual>
+   <collision>
+     <origin xyz="0 0 0" rpy="0 0 0"/>
+     <geometry>
+       <cylinder radius="0.01" length="0.05"/>
+     </geometry>
+   </collision>
+</link> 
+
+
+<joint name="rev2" type="revolute" >
+    <parent link="fake_link"/>
+    <child link="motor_frame"/>
+    <origin xyz="0 0 0" rpy="0 0 1 "/>
+    <axis xyz="1 0 0"/>
+    <limit effort="100000." lower="${-45*pi/180}" upper="${45*pi/180}" velocity="${2*pi}"/>
+    <dynamics friction="0.01" damping="0.001"/>
+</joint>
+
+<link name="motor_frame" > <!-- pot ser un mesh amb la geometria dels dos motors -->
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://robot/meshes/plat_superior.stl"/>
+      </geometry>
+      <material name="gris_rodeta">
+      </material>
+    </visual>  
+</link>
+
+    <joint name="top_propeller" type="continuous">
+    <parent link="motor_frame"/>
+    <child link="top_propeller"/>
+    <axis xyz="0 0 1"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </joint>
+
+  <link name="top_propeller">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://robot/meshes/top_propeller.stl"/>
+      </geometry>
+        <material name="gris_llanta">
+        <color rgba="${192/255} ${192/255} ${192/255} 1.0"/>
+      </material>
+    </visual>
+    <collision>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+     <geometry>
+       <cylinder radius="0.0125" length="0.05"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0078"/>
+      <inertia ixx="0.0000318" ixy="0.00" ixz="0.0" iyy="0.0000319" iyz="0.0" izz="0.0"/>
+    </inertial>
+  </link>
+
+  <joint name="bottom_propeller" type="continuous">
+    <parent link="motor_frame"/>
+    <child link="bottom_propeller"/>
+    <axis xyz="0 0 1"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </joint>
+
+  <link name="bottom_propeller">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://robot/meshes/bottom_propeller.stl"/>
+      </geometry>
+        <material name="gris_llanta">
+        <color rgba="${192/255} ${192/255} ${192/255} 1.0"/>
+      </material>
+    </visual>
+    <collision>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+     <geometry>
+       <cylinder radius="0.0125" length="0.05"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0078"/>
+      <inertia ixx="0.0000318" ixy="0.00" ixz="0.0" iyy="0.0000319" iyz="0.0" izz="0.0"/>
+    </inertial>
+  </link>
+
+
 </robot>
