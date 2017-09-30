@@ -1,0 +1,113 @@
+robot: # namespace
+  state_controller:
+     type: joint_state_controller/JointStateController
+     publish_rate: 50 # Hz, frequenia
+
+  MY_WHEEL_ONE_CONTROLLER:
+     type: effort_controllers/JointEffortController
+     joint: MY_WHEEL_ONE
+
+  MY_WHEEL_TWO_CONTROLLER:
+     type: effort_controllers/JointEffortController
+     joint: MY_WHEEL_TWO
+
+  MY_WHEEL_THREE_CONTROLLER:
+     type: effort_controllers/JointEffortController
+     joint: MY_WHEEL_THREE
+
+  MY_WHEEL_ONE_RODETA_1_CONTROLLER:
+     type: effort_controllers/JointEffortController
+     joint: MY_WHEEL_ONE_rodeta_1_joint
+
+  MY_WHEEL_ONE_RODETA_2_CONTROLLER:
+     type: effort_controllers/JointEffortController
+     joint: MY_WHEEL_ONE_rodeta_2_joint
+
+  MY_WHEEL_ONE_RODETA_3_CONTROLLER:
+     type: effort_controllers/JointEffortController
+     joint: MY_WHEEL_ONE_rodeta_3_joint
+
+  MY_WHEEL_ONE_RODETA_4_CONTROLLER:
+     type: effort_controllers/JointEffortController
+     joint: MY_WHEEL_ONE_rodeta_4_joint
+
+  MY_WHEEL_ONE_RODETA_5_CONTROLLER:
+     type: effort_controllers/JointEffortController
+     joint: MY_WHEEL_ONE_rodeta_5_joint
+
+  MY_WHEEL_ONE_RODETA_6_CONTROLLER:
+     type: effort_controllers/JointEffortController
+     joint: MY_WHEEL_ONE_rodeta_6_joint
+
+  MY_WHEEL_ONE_RODETA_7_CONTROLLER:
+     type: effort_controllers/JointEffortController
+     joint: MY_WHEEL_ONE_rodeta_7_joint
+
+  MY_WHEEL_ONE_RODETA_8_CONTROLLER:
+     type: effort_controllers/JointEffortController
+     joint: MY_WHEEL_ONE_rodeta_8_joint
+   
+  MY_WHEEL_TWO_RODETA_1_CONTROLLER:
+     type: effort_controllers/JointEffortController
+     joint: MY_WHEEL_TWO_rodeta_1_joint
+
+  MY_WHEEL_TWO_RODETA_2_CONTROLLER:
+     type: effort_controllers/JointEffortController
+     joint: MY_WHEEL_TWO_rodeta_2_joint
+
+  MY_WHEEL_TWO_RODETA_3_CONTROLLER:
+     type: effort_controllers/JointEffortController
+     joint: MY_WHEEL_TWO_rodeta_3_joint
+
+  MY_WHEEL_TWO_RODETA_4_CONTROLLER:
+     type: effort_controllers/JointEffortController
+     joint: MY_WHEEL_TWO_rodeta_4_joint
+
+  MY_WHEEL_TWO_RODETA_5_CONTROLLER:
+     type: effort_controllers/JointEffortController
+     joint: MY_WHEEL_TWO_rodeta_5_joint
+
+  MY_WHEEL_TWO_RODETA_6_CONTROLLER:
+     type: effort_controllers/JointEffortController
+     joint: MY_WHEEL_TWO_rodeta_6_joint
+
+  MY_WHEEL_TWO_RODETA_7_CONTROLLER:
+     type: effort_controllers/JointEffortController
+     joint: MY_WHEEL_TWO_rodeta_7_joint
+
+  MY_WHEEL_TWO_RODETA_8_CONTROLLER:
+     type: effort_controllers/JointEffortController
+     joint: MY_WHEEL_TWO_rodeta_8_joint
+
+
+  MY_WHEEL_THREE_RODETA_1_CONTROLLER:
+     type: effort_controllers/JointEffortController
+     joint: MY_WHEEL_THREE_rodeta_1_joint
+
+  MY_WHEEL_THREE_RODETA_2_CONTROLLER:
+     type: effort_controllers/JointEffortController
+     joint: MY_WHEEL_THREE_rodeta_2_joint
+
+  MY_WHEEL_THREE_RODETA_3_CONTROLLER:
+     type: effort_controllers/JointEffortController
+     joint: MY_WHEEL_THREE_rodeta_3_joint
+
+  MY_WHEEL_THREE_RODETA_4_CONTROLLER:
+     type: effort_controllers/JointEffortController
+     joint: MY_WHEEL_THREE_rodeta_4_joint
+
+  MY_WHEEL_THREE_RODETA_5_CONTROLLER:
+     type: effort_controllers/JointEffortController
+     joint: MY_WHEEL_THREE_rodeta_5_joint
+
+  MY_WHEEL_THREE_RODETA_6_CONTROLLER:
+     type: effort_controllers/JointEffortController
+     joint: MY_WHEEL_THREE_rodeta_6_joint
+
+  MY_WHEEL_THREE_RODETA_7_CONTROLLER:
+     type: effort_controllers/JointEffortController
+     joint: MY_WHEEL_THREE_rodeta_7_joint
+
+  MY_WHEEL_THREE_RODETA_8_CONTROLLER:
+     type: effort_controllers/JointEffortController
+     joint: MY_WHEEL_THREE_rodeta_8_joint   

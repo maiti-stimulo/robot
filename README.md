@@ -1,4 +1,13 @@
 # robot
+
+#30/09/17
+roslaunch urdf_tutorials week_4.launch
+
+> ![omniwheel](images/week_4.png)
+
+Ja està funcionant, he canviat els pesos, he revisat els moments d'inercia i al llançar-lo ja funciona. Però ara no arrenca el Rviz, i no puc ajustar la geometria de colisió
+
+
 #22/09/17
 roslaunch urdf_tutorials week_3.launch
 
