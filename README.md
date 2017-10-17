@@ -1,5 +1,20 @@
 # robot
 
+
+#17/10/17
+roslaunch urdf_tutorials week_4.launch
+
+Ja he colocat el main body dins de Gazebo
+> ![omniwheel](images/week_5.png)
+
+Però em fa un error en la rev1, veure imatge.
+> ![omniwheel](images/week_5_1.png)
+
+He fet algunes proves i no acaba d'anar, segueix amb l'error, un dels dubtes que tinc es amb el parent i child links, en la rev_1 el parent és la base i el child el fake link, linies 419 i 420.
+EN canvi el rev_" el parent és fake_link i el child és motor_frame, linies 456 i 457i això no m'acaba de lligar.
+Segueixo treballant-t'hi al llarg de la setmana.
+
+
 #30/09/17
 roslaunch urdf_tutorials week_4.launch
 

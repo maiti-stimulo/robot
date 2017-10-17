@@ -111,3 +111,19 @@ robot: # namespace
   MY_WHEEL_THREE_RODETA_8_CONTROLLER:
      type: effort_controllers/JointEffortController
      joint: MY_WHEEL_THREE_rodeta_8_joint   
+
+  REV1_MOTOR_CONTROLLER:
+     type: transmission_interface/SimpleTransmission
+     joint: rev1 
+
+  REV2_MOTOR_CONTROLLER:
+     type: position_controllers/JointTrajectoryController
+     joint: rev2   
+
+  TOP_PROPELLER_CONTROLLER:
+     type: velocity_controllers::JointGroupVelocityController
+     joint: top_propeller  
+
+  BOTTOM_PROPELLER_CONTROLLER:
+     type: velocity_controllers::JointGroupVelocityController
+     joint: bottom_propeller       
