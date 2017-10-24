@@ -112,13 +112,11 @@ robot: # namespace
      type: effort_controllers/JointEffortController
      joint: MY_WHEEL_THREE_rodeta_8_joint   
 
-  REV1_MOTOR_CONTROLLER:
+  HELIX_ORIENTATION_CONTROLLER:
      type: position_controllers/JointTrajectoryController
-     joint: rev1
-
-  REV2_MOTOR_CONTROLLER:
-     type: position_controllers/JointTrajectoryController
-     joint: rev2   
+     joints: 
+      - rev1
+      - rev2
 
   TOP_PROPELLER_CONTROLLER:
      type: velocity_controllers/JointVelocityController
