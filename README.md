@@ -1,5 +1,16 @@
 # robot
 
+#29/10/17
+roslaunch urdf_tutorials week_5.launch
+
+S'han revisat tots els moments inercia, el dimecres 25 temiem una imatge tal que aquesta.
+> ![omniwheel](images/week_5_3.png)
+
+I a dia d'avui ja hem revisat altra cop tots els moments i sembla que ja els temim tots recalculats.
+> ![omniwheel](images/week_5_4.png)
+
+Un dels punts que ha fet que s'hagi de recalcular tot és es fet que els eixos entre el Solid works i rviz o Gazebo, tot i estar orientats en el mateix eix, els sistemes de referència entre ells estan girats 90º respecte l'eix de les X. :(
+
 
 #17/10/17
 roslaunch urdf_tutorials week_4.launch
