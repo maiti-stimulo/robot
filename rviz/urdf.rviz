@@ -8,6 +8,7 @@ Panels:
         - /Status1
         - /RobotModel1
         - /TF1
+        - /TF1/Frames1
       Splitter Ratio: 0.5
     Tree Height: 769
   - Class: rviz/Selection
@@ -52,7 +53,7 @@ Visualization Manager:
       Value: true
     - Alpha: 0.5
       Class: rviz/RobotModel
-      Collision Enabled: true
+      Collision Enabled: false
       Enabled: true
       Links:
         All Links Enabled: true
@@ -199,6 +200,7 @@ Visualization Manager:
           Alpha: 1
           Show Axes: false
           Show Trail: false
+          Value: true
         bottom_propeller:
           Alpha: 1
           Show Axes: false
@@ -229,75 +231,75 @@ Visualization Manager:
       Enabled: true
       Frame Timeout: 15
       Frames:
-        All Enabled: true
+        All Enabled: false
         MY_WHEEL_ONE_frame:
-          Value: true
+          Value: false
         MY_WHEEL_ONE_rodeta_1:
-          Value: true
+          Value: false
         MY_WHEEL_ONE_rodeta_2:
-          Value: true
+          Value: false
         MY_WHEEL_ONE_rodeta_3:
-          Value: true
+          Value: false
         MY_WHEEL_ONE_rodeta_4:
-          Value: true
+          Value: false
         MY_WHEEL_ONE_rodeta_5:
-          Value: true
+          Value: false
         MY_WHEEL_ONE_rodeta_6:
-          Value: true
+          Value: false
         MY_WHEEL_ONE_rodeta_7:
-          Value: true
+          Value: false
         MY_WHEEL_ONE_rodeta_8:
-          Value: true
+          Value: false
         MY_WHEEL_THREE_frame:
-          Value: true
+          Value: false
         MY_WHEEL_THREE_rodeta_1:
-          Value: true
+          Value: false
         MY_WHEEL_THREE_rodeta_2:
-          Value: true
+          Value: false
         MY_WHEEL_THREE_rodeta_3:
-          Value: true
+          Value: false
         MY_WHEEL_THREE_rodeta_4:
-          Value: true
+          Value: false
         MY_WHEEL_THREE_rodeta_5:
-          Value: true
+          Value: false
         MY_WHEEL_THREE_rodeta_6:
-          Value: true
+          Value: false
         MY_WHEEL_THREE_rodeta_7:
-          Value: true
+          Value: false
         MY_WHEEL_THREE_rodeta_8:
-          Value: true
+          Value: false
         MY_WHEEL_TWO_frame:
-          Value: true
+          Value: false
         MY_WHEEL_TWO_rodeta_1:
-          Value: true
+          Value: false
         MY_WHEEL_TWO_rodeta_2:
-          Value: true
+          Value: false
         MY_WHEEL_TWO_rodeta_3:
-          Value: true
+          Value: false
         MY_WHEEL_TWO_rodeta_4:
-          Value: true
+          Value: false
         MY_WHEEL_TWO_rodeta_5:
-          Value: true
+          Value: false
         MY_WHEEL_TWO_rodeta_6:
-          Value: true
+          Value: false
         MY_WHEEL_TWO_rodeta_7:
-          Value: true
+          Value: false
         MY_WHEEL_TWO_rodeta_8:
-          Value: true
+          Value: false
         base:
-          Value: true
+          Value: false
         bottom_propeller:
-          Value: true
+          Value: false
         fake_link:
           Value: true
         motor_frame:
-          Value: true
+          Value: false
         top_propeller:
-          Value: true
+          Value: false
       Marker Scale: 0.5
       Name: TF
       Show Arrows: false
-      Show Axes: false
+      Show Axes: true
       Show Names: false
       Tree:
         base:
@@ -384,22 +386,22 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 0.683001
+      Distance: 0.723994
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.06
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 0
-        Y: 0
-        Z: 0
+        X: 0.00712132
+        Y: -0.00595469
+        Z: -0.0250106
       Name: Current View
       Near Clip Distance: 0.01
-      Pitch: 0.355397
+      Pitch: 0.280397
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 5.58677
+      Yaw: 0.353586
     Saved: ~
 Window Geometry:
   Displays:
@@ -417,5 +419,5 @@ Window Geometry:
   Views:
     collapsed: false
   Width: 1871
-  X: 1415
+  X: 49
   Y: 24

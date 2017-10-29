@@ -26,7 +26,7 @@
 			<arg name="headless" value="false"/>
 </include>
 
-<!--node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen" args="-urdf -model robot -param robot_description -z 0.1"/-->
+<node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen" args="-urdf -model robot -param robot_description -z 0.1"/>
 
 <!-- Load all available ros controllers -->
   <rosparam file="$(find robot)/config/controllers.yaml" command="load"/>
