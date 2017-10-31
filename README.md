@@ -11,6 +11,15 @@ I a dia d'avui ja hem revisat altra cop tots els moments i sembla que ja els tem
 
 Un dels punts que ha fet que s'hagi de recalcular tot és es fet que els eixos entre el Solid works i rviz o Gazebo, tot i estar orientats en el mateix eix, els sistemes de referència entre ells estan girats 90º respecte l'eix de les X. :(
 
+Entenc que la plataforma que té els motor i les hèlixs hem de calcular el seu moment inercia respecte el punt de gir (punt vermell imatge), igual que les hèlix, no s'ha de calcular respecte el seu centre de masses (punt verd)
+
+> ![omniwheel](images/moments inercia.jpg)
+
+
+els prismes que generen els moments d'inercia en la pala superior i la plataforma de les hèlix som més grans deguts a que el punt on calculem el moment d'inercia està fora de la figura.
+> ![omniwheel](images/week_5_5.png)
+
+JA tinc el pc nou, però encara no ho tinc tot instalat, espero fer-ho al llarg de la setmana per poder mirar el tema dels esforços en Gazebo.
 
 #17/10/17
 roslaunch urdf_tutorials week_4.launch
