@@ -13,7 +13,7 @@ Un dels punts que ha fet que s'hagi de recalcular tot és es fet que els eixos e
 
 Entenc que la plataforma que té els motor i les hèlixs hem de calcular el seu moment inercia respecte el punt de gir (punt vermell imatge), igual que les hèlix, no s'ha de calcular respecte el seu centre de masses (punt verd)
 
-> ![omniwheel](images/moments inercia.jpg)
+> ![omniwheel](images/moments_inercia.jpg)
 
 
 els prismes que generen els moments d'inercia en la pala superior i la plataforma de les hèlix som més grans deguts a que el punt on calculem el moment d'inercia està fora de la figura.
