@@ -6,7 +6,9 @@ Panels:
       Expanded:
         - /Global Options1
         - /Status1
+        - /Grid1
         - /RobotModel1
+        - /RobotModel1/Links1
         - /TF1
         - /TF1/Frames1
       Splitter Ratio: 0.5
@@ -56,7 +58,7 @@ Visualization Manager:
       Collision Enabled: false
       Enabled: true
       Links:
-        All Links Enabled: true
+        All Links Enabled: false
         Expand Joint Details: false
         Expand Link Details: false
         Expand Tree: false
@@ -65,142 +67,142 @@ Visualization Manager:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-          Value: true
+          Value: false
         MY_WHEEL_ONE_rodeta_1:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-          Value: true
+          Value: false
         MY_WHEEL_ONE_rodeta_2:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-          Value: true
+          Value: false
         MY_WHEEL_ONE_rodeta_3:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-          Value: true
+          Value: false
         MY_WHEEL_ONE_rodeta_4:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-          Value: true
+          Value: false
         MY_WHEEL_ONE_rodeta_5:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-          Value: true
+          Value: false
         MY_WHEEL_ONE_rodeta_6:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-          Value: true
+          Value: false
         MY_WHEEL_ONE_rodeta_7:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-          Value: true
+          Value: false
         MY_WHEEL_ONE_rodeta_8:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-          Value: true
+          Value: false
         MY_WHEEL_THREE_frame:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-          Value: true
+          Value: false
         MY_WHEEL_THREE_rodeta_1:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-          Value: true
+          Value: false
         MY_WHEEL_THREE_rodeta_2:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-          Value: true
+          Value: false
         MY_WHEEL_THREE_rodeta_3:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-          Value: true
+          Value: false
         MY_WHEEL_THREE_rodeta_4:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-          Value: true
+          Value: false
         MY_WHEEL_THREE_rodeta_5:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-          Value: true
+          Value: false
         MY_WHEEL_THREE_rodeta_6:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-          Value: true
+          Value: false
         MY_WHEEL_THREE_rodeta_7:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-          Value: true
+          Value: false
         MY_WHEEL_THREE_rodeta_8:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-          Value: true
+          Value: false
         MY_WHEEL_TWO_frame:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-          Value: true
+          Value: false
         MY_WHEEL_TWO_rodeta_1:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-          Value: true
+          Value: false
         MY_WHEEL_TWO_rodeta_2:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-          Value: true
+          Value: false
         MY_WHEEL_TWO_rodeta_3:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-          Value: true
+          Value: false
         MY_WHEEL_TWO_rodeta_4:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-          Value: true
+          Value: false
         MY_WHEEL_TWO_rodeta_5:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-          Value: true
+          Value: false
         MY_WHEEL_TWO_rodeta_6:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-          Value: true
+          Value: false
         MY_WHEEL_TWO_rodeta_7:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-          Value: true
+          Value: false
         MY_WHEEL_TWO_rodeta_8:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-          Value: true
+          Value: false
         base:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-          Value: true
+          Value: false
         bottom_propeller:
           Alpha: 1
           Show Axes: false
@@ -210,17 +212,17 @@ Visualization Manager:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-          Value: true
+          Value: false
         motor_frame:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-          Value: true
+          Value: false
         top_propeller:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-          Value: true
+          Value: false
       Name: RobotModel
       Robot Description: robot_description
       TF Prefix: ""
@@ -289,9 +291,9 @@ Visualization Manager:
         base:
           Value: false
         bottom_propeller:
-          Value: false
-        fake_link:
           Value: true
+        fake_link:
+          Value: false
         motor_frame:
           Value: false
         top_propeller:
@@ -386,23 +388,40 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 0.723994
+      Distance: 0.289357
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.06
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 0.00712132
-        Y: -0.00595469
-        Z: -0.0250106
+        X: 0.00074952
+        Y: 0.0285865
+        Z: 0.0655572
       Name: Current View
       Near Clip Distance: 0.01
-      Pitch: 0.280397
+      Pitch: 0.634797
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 0.353586
-    Saved: ~
+      Yaw: 5.01676
+    Saved:
+      - Class: rviz/Orbit
+        Distance: 0.289357
+        Enable Stereo Rendering:
+          Stereo Eye Separation: 0.06
+          Stereo Focal Distance: 1
+          Swap Stereo Eyes: false
+          Value: false
+        Focal Point:
+          X: 0.00074952
+          Y: 0.0285865
+          Z: 0.0655572
+        Name: Orbit
+        Near Clip Distance: 0.01
+        Pitch: 0.634797
+        Target Frame: <Fixed Frame>
+        Value: Orbit (rviz)
+        Yaw: 5.01676
 Window Geometry:
   Displays:
     collapsed: false
