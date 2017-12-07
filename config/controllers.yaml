@@ -46,6 +46,38 @@ robot: # namespace
   MY_WHEEL_ONE_RODETA_8_CONTROLLER:
      type: effort_controllers/JointEffortController
      joint: MY_WHEEL_ONE_rodeta_8_joint
+
+  MY_WHEEL_ONE_RODETA_9_CONTROLLER:
+     type: effort_controllers/JointEffortController
+     joint: MY_WHEEL_ONE_rodeta_9_joint  
+
+  MY_WHEEL_ONE_RODETA_10_CONTROLLER:
+     type: effort_controllers/JointEffortController
+     joint: MY_WHEEL_ONE_rodeta_10_joint 
+
+  MY_WHEEL_ONE_RODETA_11_CONTROLLER:
+     type: effort_controllers/JointEffortController
+     joint: MY_WHEEL_ONE_rodeta_11_joint 
+
+  MY_WHEEL_ONE_RODETA_12_CONTROLLER:
+     type: effort_controllers/JointEffortController
+     joint: MY_WHEEL_ONE_rodeta_12_joint 
+
+  MY_WHEEL_ONE_RODETA_13_CONTROLLER:
+     type: effort_controllers/JointEffortController
+     joint: MY_WHEEL_ONE_rodeta_13_joint 
+
+  MY_WHEEL_ONE_RODETA_14_CONTROLLER:
+     type: effort_controllers/JointEffortController
+     joint: MY_WHEEL_ONE_rodeta_14_joint 
+
+  MY_WHEEL_TONE_RODETA_15_CONTROLLER:
+     type: effort_controllers/JointEffortController
+     joint: MY_WHEEL_ONE_rodeta_15_joint 
+
+  MY_WHEEL_ONE_RODETA_16_CONTROLLER:
+     type: effort_controllers/JointEffortController
+     joint: MY_WHEEL_ONE_rodeta_16_joint   
    
   MY_WHEEL_TWO_RODETA_1_CONTROLLER:
      type: effort_controllers/JointEffortController
@@ -79,6 +111,37 @@ robot: # namespace
      type: effort_controllers/JointEffortController
      joint: MY_WHEEL_TWO_rodeta_8_joint
 
+  MY_WHEEL_TWO_RODETA_9_CONTROLLER:
+     type: effort_controllers/JointEffortController
+     joint: MY_WHEEL_TWO_rodeta_9_joint  
+
+  MY_WHEEL_TWO_RODETA_10_CONTROLLER:
+     type: effort_controllers/JointEffortController
+     joint: MY_WHEEL_TWO_rodeta_10_joint 
+
+  MY_WHEEL_TWO_RODETA_11_CONTROLLER:
+     type: effort_controllers/JointEffortController
+     joint: MY_WHEEL_TWO_rodeta_11_joint 
+
+  MY_WHEEL_TWO_RODETA_12_CONTROLLER:
+     type: effort_controllers/JointEffortController
+     joint: MY_WHEEL_TWO_rodeta_12_joint 
+
+  MY_WHEEL_TWO_RODETA_13_CONTROLLER:
+     type: effort_controllers/JointEffortController
+     joint: MY_WHEEL_TWO_rodeta_13_joint 
+
+  MY_WHEEL_TWO_RODETA_14_CONTROLLER:
+     type: effort_controllers/JointEffortController
+     joint: MY_WHEEL_TWO_rodeta_14_joint 
+
+  MY_WHEEL_TWO_RODETA_15_CONTROLLER:
+     type: effort_controllers/JointEffortController
+     joint: MY_WHEEL_TWO_rodeta_15_joint 
+
+  MY_WHEEL_TWO_RODETA_16_CONTROLLER:
+     type: effort_controllers/JointEffortController
+     joint: MY_WHEEL_TWO_rodeta_16_joint    
 
   MY_WHEEL_THREE_RODETA_1_CONTROLLER:
      type: effort_controllers/JointEffortController
@@ -111,6 +174,38 @@ robot: # namespace
   MY_WHEEL_THREE_RODETA_8_CONTROLLER:
      type: effort_controllers/JointEffortController
      joint: MY_WHEEL_THREE_rodeta_8_joint   
+
+  MY_WHEEL_THREE_RODETA_9_CONTROLLER:
+     type: effort_controllers/JointEffortController
+     joint: MY_WHEEL_THREE_rodeta_9_joint  
+
+  MY_WHEEL_THREE_RODETA_10_CONTROLLER:
+     type: effort_controllers/JointEffortController
+     joint: MY_WHEEL_THREE_rodeta_10_joint 
+
+  MY_WHEEL_THREE_RODETA_11_CONTROLLER:
+     type: effort_controllers/JointEffortController
+     joint: MY_WHEEL_THREE_rodeta_11_joint 
+
+  MY_WHEEL_THREE_RODETA_12_CONTROLLER:
+     type: effort_controllers/JointEffortController
+     joint: MY_WHEEL_THREE_rodeta_12_joint 
+
+  MY_WHEEL_THREE_RODETA_13_CONTROLLER:
+     type: effort_controllers/JointEffortController
+     joint: MY_WHEEL_THREE_rodeta_13_joint 
+
+  MY_WHEEL_THREE_RODETA_14_CONTROLLER:
+     type: effort_controllers/JointEffortController
+     joint: MY_WHEEL_THREE_rodeta_14_joint 
+
+  MY_WHEEL_THREE_RODETA_15_CONTROLLER:
+     type: effort_controllers/JointEffortController
+     joint: MY_WHEEL_THREE_rodeta_15_joint 
+
+  MY_WHEEL_THREE_RODETA_16_CONTROLLER:
+     type: effort_controllers/JointEffortController
+     joint: MY_WHEEL_THREE_rodeta_16_joint  
 
   HELIX_ORIENTATION_CONTROLLER:
      type: position_controllers/JointTrajectoryController

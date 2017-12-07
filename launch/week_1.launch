@@ -1,6 +1,6 @@
 <launch>
 
-  <arg name="model" default="$(find robot)/urdf/week_5.urdf"/>
+  <arg name="model" default="$(find robot)/urdf/week_6.urdf"/>
   <arg name="gui" default="true" />
   <arg name="rvizconfig" default="$(find robot)/rviz/urdf.rviz" />
 
