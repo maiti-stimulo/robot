@@ -1,5 +1,8 @@
 # robot
 
+basch folder:
+conte l'arxiu que llanca tot el projecte: launch file i joystick settings
+
 #29/10/17
 roslaunch urdf_tutorials week_5.launch
 

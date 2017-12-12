@@ -71,7 +71,7 @@ robot: # namespace
      type: effort_controllers/JointEffortController
      joint: MY_WHEEL_ONE_rodeta_14_joint 
 
-  MY_WHEEL_TONE_RODETA_15_CONTROLLER:
+  MY_WHEEL_ONE_RODETA_15_CONTROLLER:
      type: effort_controllers/JointEffortController
      joint: MY_WHEEL_ONE_rodeta_15_joint 
 
