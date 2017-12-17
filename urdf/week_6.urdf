@@ -2,7 +2,7 @@
 <robot name="robot" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
 
-  <xacro:property name="pi" value="3.141592" />
+  <!-- xacro:property name="pi" value="3.141592" / -->
     <xacro:property name="c120" value="-0.5" />
     <xacro:property name="s120" value="0.866025404" />
     <xacro:property name="c45" value="0.707106781" />
@@ -18,13 +18,13 @@
     <xacro:insert_block name="origin"/>
     <axis xyz="1 0 0"/>
     <limit effort="100000." velocity="${2*pi}"/>
-    <dynamics friction="0.01" damping="0.001"/>
+    <dynamics friction="0.001" damping="0.0001"/>
   </joint>
 
 <transmission name="${name}_trans">
   <type>transmission_interface/SimpleTransmission</type>
   <joint name="${name}">
-    <hardwareInterface>EffortJointInterface</hardwareInterface>
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
   </joint>
   <actuator name="${name}_motor">
     <mechanicalReduction>1</mechanicalReduction>
@@ -32,35 +32,35 @@
 </transmission>
 
 
-    <link name="${name}_frame">
-    <visual>
-      <origin  xyz="0 0 0" rpy="0 0 0"/>
-      <geometry>
-        <mesh filename="package://robot/meshes/omniwheel.stl"/>
-      </geometry>
-      <material name="gris_llanta">
-        <color rgba="${192/255} ${192/255} ${192/255} 1.0"/>
-      </material>
-    </visual>
-     <collision>
-           <origin xyz="0 0 0" rpy=" 0 ${0.5*pi} 0"/>
-       <geometry>
-         <cylinder length="0.01" radius="0.03"/>
-       </geometry>
-       <material name="orange_collision">
-        <color rgba="${255/255} ${153/255} ${51/255} 1.0"/>
-     </material>
-    </collision>
-     <inertial>
-      <mass value="0.039"/>
-      <inertia ixx="0.00007188" ixy="0" ixz="0" iyy="0.00003634" iyz="0" izz="0.00003634"/>
-     </inertial>
-  </link>
+<link name="${name}_frame">
+  <visual>
+    <origin  xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://robot/meshes/omniwheel.stl"/>
+    </geometry>
+    <material name="gris_llanta">
+      <color rgba="${192/255} ${192/255} ${192/255} 1.0"/>
+    </material>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy=" 0 ${0.5*pi} 0"/>
+    <geometry>
+    <cylinder length="0.01" radius="0.03"/>
+    </geometry>
+    <material name="orange_collision">
+      <color rgba="${255/255} ${153/255} ${51/255} 1.0"/>
+    </material>
+  </collision>
+  <inertial>
+    <mass value="0.039"/>
+    <inertia ixx="0.00007188" ixy="0" ixz="0" iyy="0.00003634" iyz="0" izz="0.00003634"/>
+  </inertial>
+</link>
 
   <joint name="${name}_solid" type="fixed" >
     <parent link="${name}_frame"/>
     <child link="${name}_frame_solid"/>
-    <origin  xyz="0.025 0 0" rpy="${22.5*pi/180} 0 0"/>
+        <origin  xyz="0.025 0 0" rpy="${22.5*pi/180} 0 0"/>
   </joint>
   <link name="${name}_frame_solid">
   <visual>
@@ -73,7 +73,7 @@
     </material>
   </visual>
    <collision>
-	 <origin xyz="0 0 0" rpy=" 0 ${0.5*pi} 0"/>
+   <origin xyz="0 0 0" rpy=" 0 ${0.5*pi} 0"/>
      <geometry>
        <cylinder length="0.01" radius="0.03"/>
      </geometry>
@@ -90,7 +90,7 @@
  <transmission name="${name}_rodeta_1_joint_trans">
   <type>transmission_interface/SimpleTransmission</type>
   <joint name="${name}_rodeta_1_joint">
-    <hardwareInterface>EffortJointInterface</hardwareInterface>
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
   </joint>
   <actuator name="${name}_rodeta_1_joint_motor">
     <mechanicalReduction>1</mechanicalReduction>
@@ -102,7 +102,7 @@
     <child link="${name}_rodeta_1"/>
     <axis xyz="0 1 0"/>
     <origin xyz="0 0 ${0.0525}" rpy="0 0 0"/>
-    <dynamics friction="0.01" damping="0.001"/>
+    <dynamics friction="0.001" damping="0.0001"/>
   </joint>
   <link name="${name}_rodeta_1">
     <visual>
@@ -128,7 +128,7 @@
  <transmission name="${name}_rodeta_2_joint_trans">
   <type>transmission_interface/SimpleTransmission</type>
   <joint name="${name}_rodeta_2_joint">
-    <hardwareInterface>EffortJointInterface</hardwareInterface>
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
   </joint>
   <actuator name="${name}_rodeta_2_joint_motor">
     <mechanicalReduction>1</mechanicalReduction>
@@ -140,7 +140,7 @@
     <child link="${name}_rodeta_2"/>
     <axis xyz="0 1 0"/>
     <origin xyz="0 ${c45*0.0525} ${s45*0.0525}" rpy="${-45*pi/180} 0 0"/>
-    <dynamics friction="0.01" damping="0.001"/>
+    <dynamics friction="0.001" damping="0.0001"/>
   </joint>
   <link name="${name}_rodeta_2">
     <visual>
@@ -165,7 +165,7 @@
  <transmission name="${name}_rodeta_3_joint_trans">
   <type>transmission_interface/SimpleTransmission</type>
   <joint name="${name}_rodeta_3_joint">
-    <hardwareInterface>EffortJointInterface</hardwareInterface>
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
   </joint>
   <actuator name="${name}_rodeta_3_joint_motor">
     <mechanicalReduction>1</mechanicalReduction>
@@ -177,7 +177,7 @@
     <child link="${name}_rodeta_3"/>
     <axis xyz="0 1 0"/>
     <origin xyz="${c90*0.0525} ${s90*0.0525} 0" rpy=" ${90*pi/180} 0 0"/>
-    <dynamics friction="0.01" damping="0.001"/>
+    <dynamics friction="0.001" damping="0.0001"/>
   </joint>
   <link name="${name}_rodeta_3">
     <visual>
@@ -203,7 +203,7 @@
  <transmission name="${name}_rodeta_4_joint_trans">
   <type>transmission_interface/SimpleTransmission</type>
   <joint name="${name}_rodeta_4_joint">
-    <hardwareInterface>EffortJointInterface</hardwareInterface>
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
   </joint>
   <actuator name="${name}_rodeta_4_joint_motor">
     <mechanicalReduction>1</mechanicalReduction>
@@ -215,7 +215,7 @@
     <child link="${name}_rodeta_4"/>
     <axis xyz="0 1 0"/>
     <origin xyz="0 ${s45*0.0525} ${-c45*0.0525}" rpy="${-135*pi/180} 0 0"/>
-    <dynamics friction="0.01" damping="0.001"/>
+    <dynamics friction="0.001" damping="0.0001"/>
   </joint>
   <link name="${name}_rodeta_4">
     <visual>
@@ -240,7 +240,7 @@
  <transmission name="${name}_rodeta_5_joint_trans">
   <type>transmission_interface/SimpleTransmission</type>
   <joint name="${name}_rodeta_5_joint">
-    <hardwareInterface>EffortJointInterface</hardwareInterface>
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
   </joint>
   <actuator name="${name}_rodeta_5_joint_motor">
     <mechanicalReduction>1</mechanicalReduction>
@@ -252,7 +252,7 @@
     <child link="${name}_rodeta_5"/>
     <axis xyz="0 1 0"/>
     <origin xyz="0 0 ${-0.0525}" rpy="0 0 0"/>
-    <dynamics friction="0.01" damping="0.001"/>
+    <dynamics friction="0.001" damping="0.0001"/>
   </joint>
   <link name="${name}_rodeta_5">
     <visual>
@@ -277,7 +277,7 @@
  <transmission name="${name}_rodeta_6_joint_trans">
   <type>transmission_interface/SimpleTransmission</type>
   <joint name="${name}_rodeta_6_joint">
-    <hardwareInterface>EffortJointInterface</hardwareInterface>
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
   </joint>
   <actuator name="${name}_rodeta_6_joint_motor">
     <mechanicalReduction>1</mechanicalReduction>
@@ -289,7 +289,7 @@
     <child link="${name}_rodeta_6"/>
     <axis xyz="0 1 0"/>
     <origin xyz="0 ${-s45*0.0525} ${-c45*0.0525}" rpy="${135*pi/180} 0 0"/>
-    <dynamics friction="0.01" damping="0.001"/>
+    <dynamics friction="0.001" damping="0.0001"/>
   </joint>
   <link name="${name}_rodeta_6">
     <visual>
@@ -314,7 +314,7 @@
    <transmission name="${name}_rodeta_7_joint_trans">
   <type>transmission_interface/SimpleTransmission</type>
   <joint name="${name}_rodeta_7_joint">
-    <hardwareInterface>EffortJointInterface</hardwareInterface>
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
   </joint>
   <actuator name="${name}_rodeta_7_joint_motor">
     <mechanicalReduction>1</mechanicalReduction>
@@ -326,7 +326,7 @@
     <child link="${name}_rodeta_7"/>
     <axis xyz="0 1 0"/>
     <origin xyz="${c90*0.0525} ${-s90*0.0525} 0" rpy=" ${-90*pi/180} 0 0"/>
-    <dynamics friction="0.01" damping="0.001"/>
+    <dynamics friction="0.001" damping="0.0001"/>
   </joint>
   <link name="${name}_rodeta_7">
     <visual>
@@ -351,7 +351,7 @@
  <transmission name="${name}_rodeta_8_joint_trans">
   <type>transmission_interface/SimpleTransmission</type>
   <joint name="${name}_rodeta_8_joint">
-    <hardwareInterface>EffortJointInterface</hardwareInterface>
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
   </joint>
   <actuator name="${name}_rodeta_8_joint_motor">
     <mechanicalReduction>1</mechanicalReduction>
@@ -363,7 +363,7 @@
     <child link="${name}_rodeta_8"/>
     <axis xyz="0 1 0"/>
     <origin xyz="0 ${-c45*0.0525} ${s45*0.0525}" rpy="${45*pi/180} 0 0"/>
-    <dynamics friction="0.01" damping="0.001"/>
+    <dynamics friction="0.001" damping="0.0001"/>
   </joint>
   <link name="${name}_rodeta_8">
     <visual>
@@ -388,7 +388,7 @@
   <transmission name="${name}_rodeta_9_joint_trans">
    <type>transmission_interface/SimpleTransmission</type>
    <joint name="${name}_rodeta_9_joint">
-     <hardwareInterface>EffortJointInterface</hardwareInterface>
+     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
    </joint>
    <actuator name="${name}_rodeta_9_joint_motor">
      <mechanicalReduction>1</mechanicalReduction>
@@ -400,7 +400,7 @@
     <child link="${name}_rodeta_9"/>
     <axis xyz="0 1 0"/>
     <origin xyz="0 0 ${0.0525}" rpy="0 0 0"/>
-    <dynamics friction="0.01" damping="0.001"/>
+    <dynamics friction="0.001" damping="0.0001"/>
   </joint>
   <link name="${name}_rodeta_9">
     <visual>
@@ -426,19 +426,19 @@
 <transmission name="${name}_rodeta_10_joint_trans">
    <type>transmission_interface/SimpleTransmission</type>
    <joint name="${name}_rodeta_10_joint">
-     <hardwareInterface>EffortJointInterface</hardwareInterface>
+     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
    </joint>
    <actuator name="${name}_rodeta_10_joint_motor">
      <mechanicalReduction>1</mechanicalReduction>
    </actuator>
  </transmission>
- 
+
   <joint name="${name}_rodeta_10_joint" type="continuous">
     <parent link="${name}_frame_solid"/>
     <child link="${name}_rodeta_10"/>
     <axis xyz="0 1 0"/>
     <origin xyz="0 ${c45*0.0525} ${s45*0.0525}" rpy="${-45*pi/180} 0 0"/>
-    <dynamics friction="0.01" damping="0.001"/>
+    <dynamics friction="0.001" damping="0.0001"/>
   </joint>
   <link name="${name}_rodeta_10">
     <visual>
@@ -460,11 +460,11 @@
       <inertia ixx="0.00000075" ixy="0" ixz="0" iyy="0.00000037" iyz="0" izz="0.00000075"/>
     </inertial>
   </link>
- 
+
    <transmission name="${name}_rodeta_11_joint_trans">
    <type>transmission_interface/SimpleTransmission</type>
    <joint name="${name}_rodeta_11_joint">
-     <hardwareInterface>EffortJointInterface</hardwareInterface>
+     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
    </joint>
    <actuator name="${name}_rodeta_11_joint_motor">
      <mechanicalReduction>1</mechanicalReduction>
@@ -476,7 +476,7 @@
     <child link="${name}_rodeta_11"/>
     <axis xyz="0 1 0"/>
     <origin xyz="${c90*0.0525} ${s90*0.0525} 0" rpy=" ${90*pi/180} 0 0"/>
-    <dynamics friction="0.01" damping="0.001"/>
+    <dynamics friction="0.001" damping="0.0001"/>
   </joint>
   <link name="${name}_rodeta_11">
     <visual>
@@ -502,19 +502,19 @@
   <transmission name="${name}_rodeta_12_joint_trans">
    <type>transmission_interface/SimpleTransmission</type>
    <joint name="${name}_rodeta_12_joint">
-     <hardwareInterface>EffortJointInterface</hardwareInterface>
+     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
    </joint>
    <actuator name="${name}_rodeta_12_joint_motor">
      <mechanicalReduction>1</mechanicalReduction>
    </actuator>
  </transmission>
- 
+
   <joint name="${name}_rodeta_12_joint" type="continuous">
     <parent link="${name}_frame_solid"/>
     <child link="${name}_rodeta_12"/>
     <axis xyz="0 1 0"/>
     <origin xyz="0 ${s45*0.0525} ${-c45*0.0525}" rpy="${-135*pi/180} 0 0"/>
-    <dynamics friction="0.01" damping="0.001"/>
+    <dynamics friction="0.001" damping="0.0001"/>
   </joint>
   <link name="${name}_rodeta_12">
     <visual>
@@ -536,23 +536,23 @@
       <inertia ixx="0.00000075" ixy="0" ixz="0" iyy="0.00000037" iyz="0" izz="0.00000075"/>
     </inertial>
   </link>
- 
+
  <transmission name="${name}_rodeta_13_joint_trans">
    <type>transmission_interface/SimpleTransmission</type>
    <joint name="${name}_rodeta_13_joint">
-     <hardwareInterface>EffortJointInterface</hardwareInterface>
+     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
    </joint>
    <actuator name="${name}_rodeta_13_joint_motor">
      <mechanicalReduction>1</mechanicalReduction>
    </actuator>
  </transmission>
- 
+
   <joint name="${name}_rodeta_13_joint" type="continuous">
     <parent link="${name}_frame_solid"/>
     <child link="${name}_rodeta_13"/>
     <axis xyz="0 1 0"/>
     <origin xyz="0 0 ${-0.0525}" rpy="0 0 0"/>
-    <dynamics friction="0.01" damping="0.001"/>
+    <dynamics friction="0.001" damping="0.0001"/>
   </joint>
   <link name="${name}_rodeta_13">
     <visual>
@@ -578,7 +578,7 @@
    <transmission name="${name}_rodeta_14_joint_trans">
    <type>transmission_interface/SimpleTransmission</type>
    <joint name="${name}_rodeta_14_joint">
-     <hardwareInterface>EffortJointInterface</hardwareInterface>
+     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
    </joint>
    <actuator name="${name}_rodeta_14_joint_motor">
      <mechanicalReduction>1</mechanicalReduction>
@@ -590,7 +590,7 @@
     <child link="${name}_rodeta_14"/>
     <axis xyz="0 1 0"/>
     <origin xyz="0 ${-s45*0.0525} ${-c45*0.0525}" rpy="${135*pi/180} 0 0"/>
-    <dynamics friction="0.01" damping="0.001"/>
+    <dynamics friction="0.001" damping="0.0001"/>
   </joint>
   <link name="${name}_rodeta_14">
     <visual>
@@ -616,19 +616,19 @@
   <transmission name="${name}_rodeta_15_joint_trans">
    <type>transmission_interface/SimpleTransmission</type>
    <joint name="${name}_rodeta_15_joint">
-     <hardwareInterface>EffortJointInterface</hardwareInterface>
+     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
    </joint>
    <actuator name="${name}_rodeta_15_joint_motor">
      <mechanicalReduction>1</mechanicalReduction>
    </actuator>
  </transmission>
- 
+
   <joint name="${name}_rodeta_15_joint" type="continuous">
     <parent link="${name}_frame_solid"/>
     <child link="${name}_rodeta_15"/>
     <axis xyz="0 1 0"/>
     <origin xyz="${c90*0.0525} ${-s90*0.0525} 0" rpy=" ${-90*pi/180} 0 0"/>
-    <dynamics friction="0.01" damping="0.001"/>
+    <dynamics friction="0.001" damping="0.0001"/>
   </joint>
   <link name="${name}_rodeta_15">
     <visual>
@@ -654,19 +654,19 @@
   <transmission name="${name}_rodeta_16_joint_trans">
    <type>transmission_interface/SimpleTransmission</type>
    <joint name="${name}_rodeta_16_joint">
-     <hardwareInterface>EffortJointInterface</hardwareInterface>
+     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
    </joint>
    <actuator name="${name}_rodeta_16_joint_motor">
      <mechanicalReduction>1</mechanicalReduction>
    </actuator>
  </transmission>
- 
+
   <joint name="${name}_rodeta_16_joint" type="continuous">
     <parent link="${name}_frame_solid"/>
     <child link="${name}_rodeta_16"/>
     <axis xyz="0 1 0"/>
     <origin xyz="0 ${-c45*0.0525} ${s45*0.0525}" rpy="${45*pi/180} 0 0"/>
-    <dynamics friction="0.01" damping="0.001"/>
+    <dynamics friction="0.001" damping="0.0001"/>
   </joint>
   <link name="${name}_rodeta_16">
     <visual>
@@ -701,12 +701,13 @@
     </visual>
     <collision>
       <geometry>
-        <cylinder length="0.11" radius="0.225"/>
+        <cylinder length="0.05" radius="0.1"/>
       </geometry>
     </collision>
     <inertial>
-      <mass value="0.42"/>
-      <inertia ixx="0.00635774" ixy="-0.00000122" ixz="0.00000113" iyy="0.00635799" iyz="-0.00000046" izz="0.01183334"/>
+      <mass value="0.1"/>
+      <!-- inertia ixx="0.00635774" ixy="-0.00000122" ixz="0.00000113" iyy="0.00635799" iyz="-0.00000046" izz="0.01183334"/ -->
+      <inertia ixx="0.000635774" ixy="0.0" ixz="0.0" iyy="0.000635799" iyz="0.0" izz="0.001183334"/>
     </inertial>
 </link>
 
@@ -727,7 +728,7 @@
 <transmission name="rev1_trans">
   <type>transmission_interface/SimpleTransmission</type>
   <joint name="rev1">
-    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
   </joint>
   <actuator name="rev1_motor">
     <mechanicalReduction>1</mechanicalReduction>
@@ -741,7 +742,7 @@
     <origin xyz="0 0 0.07024" rpy="0 0 ${90*pi/180}"/>
     <!--origin xyz="0 0 0" rpy="0 0 ${90*pi/180}"/-->
     <limit effort="100000" lower="${-35*pi/180}" upper="${35*pi/180}" velocity="${2*pi}"/>
-    <dynamics friction="0.01" damping="0.001"/>
+    <dynamics friction="0.001" damping="0.0001"/>
 </joint>
 
 <link name="fake_link" >
@@ -761,15 +762,16 @@
      </geometry>
    </collision>
    <inertial>
-      <mass value="0.000510"/>
-      <inertia ixx="0" ixy="0" ixz="0" iyy="0." iyz="0" izz="0"/>
+     <origin xyz="0 0 -0.02" rpy="0 0 0" />
+     <mass value="0.0679"/>
+           <inertia ixx="0.000035045" ixy="0" ixz="0" iyy="0.000035046" iyz="0" izz="0.00041102"/>
     </inertial>
 </link>
 
 <transmission name="rev2_trans">
   <type>transmission_interface/SimpleTransmission</type>
   <joint name="rev2">
-    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
   </joint>
   <actuator name="rev2_motor">
     <mechanicalReduction>1</mechanicalReduction>
@@ -779,10 +781,10 @@
 <joint name="rev2" type="revolute" >
     <parent link="fake_link"/>
     <child link="motor_frame"/>
-    <origin xyz="0 0 0" rpy="0 0 1 "/>
+    <origin xyz="0 0 0" rpy="0 0 0 "/>
     <axis xyz="0 1 0"/>
     <limit effort="100000." lower="${-35*pi/180}" upper="${35*pi/180}" velocity="${2*pi}"/>
-    <dynamics friction="0.01" damping="0.001"/>
+    <dynamics friction="0.001" damping="0.0001"/>
 </joint>
 
 
@@ -802,6 +804,7 @@
       </geometry>
     </collision>
     <inertial>
+  <origin xyz="0 0 0.035" rpy="0 0 0" />
       <mass value="0.0679"/>
       <inertia ixx="0.00035045" ixy="0" ixz="0" iyy="0.00035046" iyz="0" izz="0.00041102"/>
     </inertial>
@@ -812,7 +815,7 @@
 <transmission name="top_propeller_trans">
   <type>transmission_interface/SimpleTransmission</type>
   <joint name="top_propeller">
-    <hardwareInterface>VelocityJointInterface</hardwareInterface>
+    <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
   </joint>
   <actuator name="top_propeller_motor">
     <mechanicalReduction>1</mechanicalReduction>
@@ -825,7 +828,8 @@
     <child link="top_propeller"/>
     <axis xyz="0 0 1"/>
     <origin xyz="0 0 0" rpy="0 0 0"/>
-    <limit effort="999999" velocity="${1000*pi}"/>
+    <limit effort="999999" velocity="50000"/>
+    <dynamics friction="0.001" damping="0.0001"/>
   </joint>
 
   <link name="top_propeller">
@@ -845,8 +849,9 @@
       </geometry>
     </collision>
     <inertial>
+  <origin xyz="0 0 0.07" rpy="0 0 0" />
       <mass value="0.0078"/>
-      <inertia ixx="0.00006936" ixy="-0.00000012" ixz="0" iyy="0.00003771" iyz="0" izz="0.00003186"/>
+      <inertia ixx="0.00003179" ixy="-0.00000012" ixz="0" iyy="0.00000014" iyz="0" izz="0.00003186"/>
       <!--inertia ixx="0.00003179" ixy="0.00000012" ixz="0" iyy="0.00000014" iyz="0" izz="0.00003186"
       <inertia ixx="0.00007102" ixy="0.00000012" ixz="0" iyy="0.00003937" iyz="0" izz="0.00003186"/>/-->
     </inertial>
@@ -856,7 +861,7 @@
 <transmission name="bottom_propeller_trans">
   <type>transmission_interface/SimpleTransmission</type>
   <joint name="bottom_propeller">
-    <hardwareInterface>VelocityJointInterface</hardwareInterface>
+    <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
   </joint>
   <actuator name="bottom_propeller_motor">
     <mechanicalReduction>1</mechanicalReduction>
@@ -868,7 +873,7 @@
     <child link="bottom_propeller"/>
     <axis xyz="0 0 1"/>
     <origin xyz="0 0 0" rpy="0 0 0"/>
-    <limit effort="999999" velocity="${1000*pi}"/>
+    <limit effort="999999" velocity="50000"/>
     <dynamics friction="0.001" damping="0.0001"/>
   </joint>
 
@@ -890,6 +895,7 @@
       </geometry>
     </collision>
     <inertial>
+      <origin xyz="0 0 -0.005" rpy="0 0 0" />
       <mass value="0.0078"/>
       <inertia ixx="0.00003179" ixy="-0.00000012" ixz="0" iyy="0.00000014" iyz="0" izz="0.00003186"/>
     </inertial>
@@ -916,64 +922,74 @@
       cda_stall: The ratio of coefficient of drag and alpha slope after stall.
     -->
     <plugin name="top_propeller_1" filename="libLiftDragPlugin.so">
-      <a0>0.3</a0>
-      <cla>4.752798721</cla>
-      <cda>0.6417112299</cda>
-      <alpha_stall>1.3</alpha_stall>
-      <cla_stall>-3.85</cla_stall>
-      <cda_stall>-0.9233984055</cda_stall>
-      <cp>0 0.012 0.15</cp>
-      <area>0.005</area>
+  <a0>0.3</a0>
+  <cla>1.4</cla>
+  <cda>0.0</cda>
+  <alpha_stall>1.2</alpha_stall>
+  <cla_stall>-0.2</cla_stall>
+  <cda_stall>-0.0</cda_stall>
+      <cp>0 0.08 0.015</cp>
+      <area>1</area>
       <air_density>1.2041</air_density>
-      <forward>-0.96 0 0.28</forward>
-      <upward>0.28 0 0.96</upward>
+      <forward>-1.0 0 0.0</forward>
+      <upward>0.0 0 1.0</upward>
       <link_name>top_propeller</link_name>
     </plugin>
 
     <plugin name="top_propeller_2" filename="libLiftDragPlugin.so">
-      <a0>0.3</a0>
-      <cla>4.752798721</cla>
-      <cda>0.6417112299</cda>
-      <alpha_stall>1.3</alpha_stall>
-      <cla_stall>-3.85</cla_stall>
-      <cda_stall>-0.9233984055</cda_stall>
-      <cp>0 -0.012 0.15</cp>
-      <area>0.005</area>
+  <a0>0.3</a0>
+  <cla>1.4</cla>
+  <cda>0.2</cda>
+  <alpha_stall>1.2</alpha_stall>
+  <cla_stall>-0.2</cla_stall>
+  <cda_stall>-0.0</cda_stall>
+      <cp>0 -0.08 0.015</cp>
+      <area>1</area>
       <air_density>1.2041</air_density>
-      <forward>0.96 0 0.28</forward>
-      <upward>-0.28 0 0.96</upward>
+      <forward>1.0 0 0.0</forward>
+      <upward>0.0 0 1.0</upward>
       <link_name>top_propeller</link_name>
     </plugin>
 
-    <!-- plugin name="bottom_propeller_1" filename="libLiftDragPlugin.so">
-      <a0>0.3</a0>
-      <cla>4.752798721</cla>
-      <cda>0.6417112299</cda>
-      <alpha_stall>1.3</alpha_stall>
-      <cla_stall>-3.85</cla_stall>
-      <cda_stall>-0.9233984055</cda_stall>
-      <cp>0 0.012 0.005</cp>
-      <area>0.00125</area>
+    <plugin name="bottom_propeller_1" filename="libLiftDragPlugin.so">
+      <a0>0.1</a0>
+      <cla>0.1</cla>
+      <cda>0.01</cda>
+      <cma>0.0</cma>
+      <alpha_stall>0.26</alpha_stall>
+      <cla_stall>-0.2</cla_stall>
+      <cda_stall>1.0</cda_stall>
+      <cma_stall>0.0</cma_stall>
+      <cp>0 0.08 -0.005</cp>
+      <area>0.05</area>
       <air_density>1.2041</air_density>
-      <forward>1 0 0</forward>
-      <upward>0 0 1</upward>
+      <forward>-1 0 0.0</forward>
+      <upward>-0.0 0 1.0</upward>
       <link_name>bottom_propeller</link_name>
     </plugin>
 
       <plugin name="bottom_propeller_2" filename="libLiftDragPlugin.so">
-        <a0>0.3</a0>
-        <cla>4.752798721</cla>
-        <cda>0.6417112299</cda>
-        <alpha_stall>1.3</alpha_stall>
-        <cla_stall>-3.85</cla_stall>
-        <cda_stall>-0.9233984055</cda_stall>
-        <cp>0 -0.012 0.005</cp>
-        <area>0.00125</area>
+        <a0>0.1</a0>
+        <cla>0.1</cla>
+        <cda>0.01</cda>
+  <cma>0.0</cma>
+        <alpha_stall>0.26</alpha_stall>
+        <cla_stall>-0.2</cla_stall>
+        <cda_stall>1.0</cda_stall>
+  <cma_stall>0.0</cma_stall>
+        <cp>0 -0.08 -0.005</cp>
+        <area>0.05</area>
         <air_density>1.2041</air_density>
-	<forward>-1 0 0</forward>
-        <upward>0 0 1</upward>
+  <forward>1.0 0 0</forward>
+        <upward>0.0 0 1.0</upward>
         <link_name>bottom_propeller</link_name>
-     </plugin -->
+</plugin>
+
+<plugin name="force_base" filename="libgazebo_ros_force.so">
+  <bodyName>base</bodyName>
+  <robotNamespace>/robot</robotNamespace>
+  <topicName>force_to_base</topicName>
+</plugin>
 
 </gazebo>
 
