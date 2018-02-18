@@ -1,0 +1,53 @@
+
+<?xml version="1.0"?>
+<robot name="SPM_1">
+
+  <link name="stepper_motor">
+    <visual>
+      <geometry>
+         <mesh filename="package://spm/meshes/stepper_motor.stl"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <color rgba="0 0 0.8 1"/>
+    </visual>
+  </link>
+
+    <link name="arm_1">
+    <visual>
+      <geometry>
+        <mesh filename="package://spm/meshes/arm_1.stl"/>
+      </geometry>
+      <origin rpy=" 0 0 0" xyz="0 0 0"/>
+      <color rgba="1 1 1 1"/>
+    </visual>
+  </link>
+
+ <joint name="stepper_motor_to_arm_1" type="continuous">
+    <parent link="stepper_motor"/>
+    <child link="arm_1"/>
+    <axis xyz="0 0 0"/>
+    <origin xyz="0 0 0"/>
+  </joint>
+
+        <link name="arm_2">
+    <visual>
+      <geometry>
+        <mesh filename="package://spm/meshes/arm_2.stl"/>
+      </geometry>
+      <origin rpy=" 0 0 0" xyz="0 0 0"/>
+      <color rgba="1 1 0 1"/>
+    </visual>
+  </link>
+
+   <joint name="arm_1_to_arm_2" type="continuous">
+    <parent link="arm_1"/>
+    <child link="arm_2"/>
+    <axis xyz="0 0 0"/>
+    <origin xyz="0 0 0"/>
+  </joint>
+
+
+</robot>
+
+
+

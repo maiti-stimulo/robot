@@ -78,7 +78,7 @@
     <parent link="${name}_frame"/>
     <child link="${name}_rodeta_2"/>
     <axis xyz="0 1 0"/>
-    <origin xyz="0 ${c45*0.0525} ${s45*0.0525}" rpy="${-45*pi/180} 0 0"/>
+    <origin xyz="0 ${c45*0.06} ${s45*0.06}" rpy="${-45*pi/180} 0 0"/>
   </joint>
   <link name="${name}_rodeta_2">
     <visual>

@@ -1,0 +1,121 @@
+<?xml version="1.0"?>
+<robot name="spm_1" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+
+  <xacro:property name="pi" value="3.141592" />
+    <xacro:property name="c120" value="-0.5" />
+    <xacro:property name="s120" value="0.866025404" />
+    <xacro:property name="c45" value="0.707106781" />
+    <xacro:property name="s45" value="0.707106781" />
+    <xacro:property name="c90" value="0" />
+    <xacro:property name="s90" value="1" />
+    <xacro:property name="s30" value="0.5" />
+
+
+   
+    <link name="base" />
+
+    <link name="stepper_motor">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+         <mesh filename="package://robot/meshes/motor.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="motor">
+        <color rgba="${192/255} ${192/255} ${192/255} 1.0"/>
+      </material>
+    </visual>
+  </link>
+
+ <joint name="base_to_stepper_motor" type="fixed">
+    <parent link="base"/>
+    <child link="stepper_motor"/>
+    <axis xyz="0 0 1" />
+    <origin xyz="0 0 0" rpy= "0 0 0"/>
+  </joint>
+
+ <link name="motor_axis">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+         <mesh filename="package://robot/meshes/eix_motor.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="motor">
+        <color rgba="${192/255} ${192/255} ${192/255} 1.0"/>
+      </material>
+    </visual>
+  </link>
+
+ <joint name="motor_to_axis" type="fixed">
+    <parent link="stepper_motor"/>
+    <child link="motor_axis"/>
+    <axis xyz="0 0 1" />
+    <origin xyz="0 0.12926 0.06335" rpy= "${-112.5*pi/180} 0 0"/>
+    
+  </joint>${45*pi/180}
+
+<link name="arm_1">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://robot/meshes/inferior_arm.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="arm_1">
+        <color rgba="${255/255} ${153/255} ${51/255} 1.0"/>
+     </material>
+    </visual>
+  </link>
+
+ <joint name="rev_1" type="revolute">
+    <parent link="motor_axis"/>
+    <child link="arm_1"/>
+    <axis xyz="0 0 1"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <limit effort="100000" lower="${-45*pi/180}" upper="${45*pi/180}" velocity="${2*pi}"/>
+    <dynamics friction="0.01" damping="0.001"/> 
+  </joint>
+
+
+   <link name="arm_2">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://robot/meshes/as.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+          <material name="arm_2">
+        <color rgba="${150/255} ${150/255} ${50/255} 1.0"/>
+     </material>
+    </visual>
+  </link>
+
+   <joint name="rev_2" type="revolute">
+    <parent link="arm_1"/>
+    <child link="arm_2"/>
+    <axis xyz="0 0 1"/>
+    <origin xyz="0 -0.05327 -0.01067" rpy= "${22.5*pi/180} 0 0"/>
+    <limit effort="100000" lower="${-45*pi/180}" upper="${45*pi/180}" velocity="${2*pi}"/>
+    <dynamics friction="0.01" damping="0.001"/>
+  </joint>
+
+
+  <link name="fork" > 
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://robot/meshes/fork.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="motor">
+      </material>
+    </visual>
+  </link>
+
+     <joint name="rev_3" type="revolute">
+    <parent link="arm_2"/>
+    <child link="fork"/>
+    <axis xyz="0 0 1"/>
+    <origin xyz="0 0 0" rpy= "${90*pi/180} 0 0"/>
+    <limit effort="100000" lower="${-45*pi/180}" upper="${45*pi/180}" velocity="${2*pi}"/>
+    <dynamics friction="0.01" damping="0.001"/>
+  </joint>
+   
+</robot>

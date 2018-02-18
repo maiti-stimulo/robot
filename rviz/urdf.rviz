@@ -11,8 +11,9 @@ Panels:
         - /RobotModel1/Links1
         - /TF1
         - /TF1/Frames1
+        - /TF1/Tree1
       Splitter Ratio: 0.5
-    Tree Height: 457
+    Tree Height: 466
   - Class: rviz/Selection
     Name: Selection
   - Class: rviz/Tool Properties
@@ -58,306 +59,40 @@ Visualization Manager:
       Collision Enabled: false
       Enabled: true
       Links:
-        All Links Enabled: false
+        All Links Enabled: true
         Expand Joint Details: false
         Expand Link Details: false
         Expand Tree: false
         Link Tree Style: Links in Alphabetic Order
-        MY_WHEEL_ONE_frame:
+        arm_1:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-          Value: false
-        MY_WHEEL_ONE_frame_solid:
+          Value: true
+        arm_2:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-          Value: false
-        MY_WHEEL_ONE_rodeta_1:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: false
-        MY_WHEEL_ONE_rodeta_10:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: false
-        MY_WHEEL_ONE_rodeta_11:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: false
-        MY_WHEEL_ONE_rodeta_12:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: false
-        MY_WHEEL_ONE_rodeta_13:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: false
-        MY_WHEEL_ONE_rodeta_14:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: false
-        MY_WHEEL_ONE_rodeta_15:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: false
-        MY_WHEEL_ONE_rodeta_16:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: false
-        MY_WHEEL_ONE_rodeta_2:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: false
-        MY_WHEEL_ONE_rodeta_3:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: false
-        MY_WHEEL_ONE_rodeta_4:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: false
-        MY_WHEEL_ONE_rodeta_5:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: false
-        MY_WHEEL_ONE_rodeta_6:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: false
-        MY_WHEEL_ONE_rodeta_7:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: false
-        MY_WHEEL_ONE_rodeta_8:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: false
-        MY_WHEEL_ONE_rodeta_9:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: false
-        MY_WHEEL_THREE_frame:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: false
-        MY_WHEEL_THREE_frame_solid:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: false
-        MY_WHEEL_THREE_rodeta_1:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: false
-        MY_WHEEL_THREE_rodeta_10:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: false
-        MY_WHEEL_THREE_rodeta_11:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: false
-        MY_WHEEL_THREE_rodeta_12:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: false
-        MY_WHEEL_THREE_rodeta_13:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: false
-        MY_WHEEL_THREE_rodeta_14:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: false
-        MY_WHEEL_THREE_rodeta_15:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: false
-        MY_WHEEL_THREE_rodeta_16:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: false
-        MY_WHEEL_THREE_rodeta_2:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: false
-        MY_WHEEL_THREE_rodeta_3:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: false
-        MY_WHEEL_THREE_rodeta_4:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: false
-        MY_WHEEL_THREE_rodeta_5:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: false
-        MY_WHEEL_THREE_rodeta_6:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: false
-        MY_WHEEL_THREE_rodeta_7:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: false
-        MY_WHEEL_THREE_rodeta_8:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: false
-        MY_WHEEL_THREE_rodeta_9:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: false
-        MY_WHEEL_TWO_frame:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: false
-        MY_WHEEL_TWO_frame_solid:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: false
-        MY_WHEEL_TWO_rodeta_1:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: false
-        MY_WHEEL_TWO_rodeta_10:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: false
-        MY_WHEEL_TWO_rodeta_11:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: false
-        MY_WHEEL_TWO_rodeta_12:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: false
-        MY_WHEEL_TWO_rodeta_13:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: false
-        MY_WHEEL_TWO_rodeta_14:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: false
-        MY_WHEEL_TWO_rodeta_15:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: false
-        MY_WHEEL_TWO_rodeta_16:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: false
-        MY_WHEEL_TWO_rodeta_2:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: false
-        MY_WHEEL_TWO_rodeta_3:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: false
-        MY_WHEEL_TWO_rodeta_4:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: false
-        MY_WHEEL_TWO_rodeta_5:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: false
-        MY_WHEEL_TWO_rodeta_6:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: false
-        MY_WHEEL_TWO_rodeta_7:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: false
-        MY_WHEEL_TWO_rodeta_8:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: false
-        MY_WHEEL_TWO_rodeta_9:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: false
+          Value: true
         base:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-          Value: false
-        bottom_propeller:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: false
-        fake_link:
+        fork:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        motor_frame:
+        motor_axis:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        top_propeller:
+        stepper_motor:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-          Value: false
+          Value: true
       Name: RobotModel
       Robot Description: robot_description
       TF Prefix: ""
@@ -369,123 +104,17 @@ Visualization Manager:
       Frame Timeout: 15
       Frames:
         All Enabled: false
-        MY_WHEEL_ONE_frame:
-          Value: false
-        MY_WHEEL_ONE_frame_solid:
-          Value: false
-        MY_WHEEL_ONE_rodeta_1:
-          Value: false
-        MY_WHEEL_ONE_rodeta_10:
-          Value: false
-        MY_WHEEL_ONE_rodeta_11:
-          Value: false
-        MY_WHEEL_ONE_rodeta_12:
-          Value: false
-        MY_WHEEL_ONE_rodeta_13:
-          Value: false
-        MY_WHEEL_ONE_rodeta_14:
-          Value: false
-        MY_WHEEL_ONE_rodeta_15:
-          Value: false
-        MY_WHEEL_ONE_rodeta_16:
-          Value: false
-        MY_WHEEL_ONE_rodeta_2:
-          Value: false
-        MY_WHEEL_ONE_rodeta_3:
-          Value: false
-        MY_WHEEL_ONE_rodeta_4:
-          Value: false
-        MY_WHEEL_ONE_rodeta_5:
-          Value: false
-        MY_WHEEL_ONE_rodeta_6:
-          Value: false
-        MY_WHEEL_ONE_rodeta_7:
-          Value: false
-        MY_WHEEL_ONE_rodeta_8:
-          Value: false
-        MY_WHEEL_ONE_rodeta_9:
-          Value: false
-        MY_WHEEL_THREE_frame:
-          Value: false
-        MY_WHEEL_THREE_frame_solid:
-          Value: false
-        MY_WHEEL_THREE_rodeta_1:
-          Value: false
-        MY_WHEEL_THREE_rodeta_10:
-          Value: false
-        MY_WHEEL_THREE_rodeta_11:
-          Value: false
-        MY_WHEEL_THREE_rodeta_12:
-          Value: false
-        MY_WHEEL_THREE_rodeta_13:
-          Value: false
-        MY_WHEEL_THREE_rodeta_14:
-          Value: false
-        MY_WHEEL_THREE_rodeta_15:
-          Value: false
-        MY_WHEEL_THREE_rodeta_16:
-          Value: false
-        MY_WHEEL_THREE_rodeta_2:
-          Value: false
-        MY_WHEEL_THREE_rodeta_3:
-          Value: false
-        MY_WHEEL_THREE_rodeta_4:
-          Value: false
-        MY_WHEEL_THREE_rodeta_5:
-          Value: false
-        MY_WHEEL_THREE_rodeta_6:
-          Value: false
-        MY_WHEEL_THREE_rodeta_7:
-          Value: false
-        MY_WHEEL_THREE_rodeta_8:
-          Value: false
-        MY_WHEEL_THREE_rodeta_9:
-          Value: false
-        MY_WHEEL_TWO_frame:
-          Value: false
-        MY_WHEEL_TWO_frame_solid:
-          Value: false
-        MY_WHEEL_TWO_rodeta_1:
-          Value: false
-        MY_WHEEL_TWO_rodeta_10:
-          Value: false
-        MY_WHEEL_TWO_rodeta_11:
-          Value: false
-        MY_WHEEL_TWO_rodeta_12:
-          Value: false
-        MY_WHEEL_TWO_rodeta_13:
-          Value: false
-        MY_WHEEL_TWO_rodeta_14:
-          Value: false
-        MY_WHEEL_TWO_rodeta_15:
-          Value: false
-        MY_WHEEL_TWO_rodeta_16:
-          Value: false
-        MY_WHEEL_TWO_rodeta_2:
-          Value: false
-        MY_WHEEL_TWO_rodeta_3:
-          Value: false
-        MY_WHEEL_TWO_rodeta_4:
-          Value: false
-        MY_WHEEL_TWO_rodeta_5:
-          Value: false
-        MY_WHEEL_TWO_rodeta_6:
-          Value: false
-        MY_WHEEL_TWO_rodeta_7:
-          Value: false
-        MY_WHEEL_TWO_rodeta_8:
-          Value: false
-        MY_WHEEL_TWO_rodeta_9:
-          Value: false
+        arm_1:
+          Value: true
+        arm_2:
+          Value: true
         base:
-          Value: false
-        bottom_propeller:
-          Value: false
-        fake_link:
           Value: true
-        motor_frame:
+        fork:
           Value: true
-        top_propeller:
+        motor_axis:
+          Value: true
+        stepper_motor:
           Value: false
       Marker Scale: 0.1
       Name: TF
@@ -494,119 +123,17 @@ Visualization Manager:
       Show Names: false
       Tree:
         base:
-          MY_WHEEL_ONE_frame:
-            MY_WHEEL_ONE_frame_solid:
-              MY_WHEEL_ONE_rodeta_10:
-                {}
-              MY_WHEEL_ONE_rodeta_11:
-                {}
-              MY_WHEEL_ONE_rodeta_12:
-                {}
-              MY_WHEEL_ONE_rodeta_13:
-                {}
-              MY_WHEEL_ONE_rodeta_14:
-                {}
-              MY_WHEEL_ONE_rodeta_15:
-                {}
-              MY_WHEEL_ONE_rodeta_16:
-                {}
-              MY_WHEEL_ONE_rodeta_9:
-                {}
-            MY_WHEEL_ONE_rodeta_1:
-              {}
-            MY_WHEEL_ONE_rodeta_2:
-              {}
-            MY_WHEEL_ONE_rodeta_3:
-              {}
-            MY_WHEEL_ONE_rodeta_4:
-              {}
-            MY_WHEEL_ONE_rodeta_5:
-              {}
-            MY_WHEEL_ONE_rodeta_6:
-              {}
-            MY_WHEEL_ONE_rodeta_7:
-              {}
-            MY_WHEEL_ONE_rodeta_8:
-              {}
-          MY_WHEEL_THREE_frame:
-            MY_WHEEL_THREE_frame_solid:
-              MY_WHEEL_THREE_rodeta_10:
-                {}
-              MY_WHEEL_THREE_rodeta_11:
-                {}
-              MY_WHEEL_THREE_rodeta_12:
-                {}
-              MY_WHEEL_THREE_rodeta_13:
-                {}
-              MY_WHEEL_THREE_rodeta_14:
-                {}
-              MY_WHEEL_THREE_rodeta_15:
-                {}
-              MY_WHEEL_THREE_rodeta_16:
-                {}
-              MY_WHEEL_THREE_rodeta_9:
-                {}
-            MY_WHEEL_THREE_rodeta_1:
-              {}
-            MY_WHEEL_THREE_rodeta_2:
-              {}
-            MY_WHEEL_THREE_rodeta_3:
-              {}
-            MY_WHEEL_THREE_rodeta_4:
-              {}
-            MY_WHEEL_THREE_rodeta_5:
-              {}
-            MY_WHEEL_THREE_rodeta_6:
-              {}
-            MY_WHEEL_THREE_rodeta_7:
-              {}
-            MY_WHEEL_THREE_rodeta_8:
-              {}
-          MY_WHEEL_TWO_frame:
-            MY_WHEEL_TWO_frame_solid:
-              MY_WHEEL_TWO_rodeta_10:
-                {}
-              MY_WHEEL_TWO_rodeta_11:
-                {}
-              MY_WHEEL_TWO_rodeta_12:
-                {}
-              MY_WHEEL_TWO_rodeta_13:
-                {}
-              MY_WHEEL_TWO_rodeta_14:
-                {}
-              MY_WHEEL_TWO_rodeta_15:
-                {}
-              MY_WHEEL_TWO_rodeta_16:
-                {}
-              MY_WHEEL_TWO_rodeta_9:
-                {}
-            MY_WHEEL_TWO_rodeta_1:
-              {}
-            MY_WHEEL_TWO_rodeta_2:
-              {}
-            MY_WHEEL_TWO_rodeta_3:
-              {}
-            MY_WHEEL_TWO_rodeta_4:
-              {}
-            MY_WHEEL_TWO_rodeta_5:
-              {}
-            MY_WHEEL_TWO_rodeta_6:
-              {}
-            MY_WHEEL_TWO_rodeta_7:
-              {}
-            MY_WHEEL_TWO_rodeta_8:
-              {}
-          fake_link:
-            motor_frame:
-              bottom_propeller:
-                {}
-              top_propeller:
-                {}
+          stepper_motor:
+            motor_axis:
+              arm_1:
+                arm_2:
+                  fork:
+                    {}
       Update Interval: 0
       Value: true
   Enabled: true
   Global Options:
-    Background Color: 255; 255; 255
+    Background Color: 198; 198; 198
     Fixed Frame: base
     Frame Rate: 30
   Name: root
@@ -628,22 +155,22 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 0.112056
+      Distance: 0.657556
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.06
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: -0.00949335
-        Y: -0.0271593
-        Z: 0.0722477
+        X: 0.213645
+        Y: -0.00510635
+        Z: 0.149185
       Name: Current View
       Near Clip Distance: 0.01
-      Pitch: 0.414797
+      Pitch: -0.0802037
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 1.52493
+      Yaw: 3.11813
     Saved:
       - Class: rviz/Orbit
         Distance: 0.289357
@@ -681,11 +208,11 @@ Visualization Manager:
         Yaw: 1.68176
 Window Geometry:
   Displays:
-    collapsed: true
+    collapsed: false
   Height: 744
-  Hide Left Dock: true
+  Hide Left Dock: false
   Hide Right Dock: true
-  QMainWindow State: 000000ff00000000fd00000004000000000000018e00000258fc0200000008fb0000001200530065006c0065006300740069006f006e00000001e10000009b0000006400fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c006100790073000000002800000258000000dd00fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261000000010000010f0000023cfc0200000003fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a0056006900650077007300000000280000023c000000b000fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e100000197000000030000052500000044fc0100000002fb0000000800540069006d0065010000000000000525000002f600fffffffb0000000800540069006d00650100000000000004500000000000000000000005250000025800000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  QMainWindow State: 000000ff00000000fd00000004000000000000018e00000261fc0200000008fb0000001200530065006c0065006300740069006f006e00000001e10000009b0000006400fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c006100790073010000002800000261000000dd00fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261000000010000010f0000023cfc0200000003fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a0056006900650077007300000000280000023c000000b000fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e10000019700000003000005250000003bfc0100000002fb0000000800540069006d0065010000000000000525000002f600fffffffb0000000800540069006d00650100000000000004500000000000000000000003910000026100000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
   Selection:
     collapsed: false
   Time:

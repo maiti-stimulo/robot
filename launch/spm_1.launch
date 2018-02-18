@@ -1,6 +1,6 @@
 <launch>
 
-  <arg name="model" default="$(find robot)/urdf/week_1.urdf"/>
+  <arg name="model" default="$(find robot)/urdf/spm_1.urdf"/>
   <arg name="gui" default="true" />
   <arg name="rvizconfig" default="$(find robot)/rviz/urdf.rviz" />
 
@@ -12,3 +12,8 @@
   <node name="rviz" pkg="rviz" type="rviz" args="-d $(arg rvizconfig)" required="true" />
 
 </launch>
+
+
+
+
+
