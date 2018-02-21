@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<robot name="spm_1" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+
+  <xacro:property name="pi" value="3.141592" />
+    <xacro:property name="c120" value="-0.5" />
+    <xacro:property name="s120" value="0.866025404" />
+    <xacro:property name="c45" value="0.707106781" />
+    <xacro:property name="s45" value="0.707106781" />
+    <xacro:property name="c90" value="0" />
+    <xacro:property name="s90" value="1" />
+    <xacro:property name="s30" value="0.5" />
+
+
+   
+
+
+
+<link name="fake_1">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://robot/meshes/fake_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+          <material name="arm_2">
+        <color rgba="${150/255} ${150/255} ${50/255} 1.0"/>
+     </material>
+    </visual>
+  </link>
+
+
+
+
+   
+</robot>

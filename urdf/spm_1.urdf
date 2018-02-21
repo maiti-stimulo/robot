@@ -17,7 +17,7 @@
 
     <link name="stepper_motor">
     <visual>
-      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <origin rpy="0 0 0" xyz="0 0 0 "/>
       <geometry>
          <mesh filename="package://robot/meshes/motor.stl" scale="0.001 0.001 0.001"/>
       </geometry>
@@ -97,25 +97,44 @@
     <dynamics friction="0.01" damping="0.001"/>
   </joint>
 
+     <link name="axis_arm_2">
+        <visual>
+          <geometry>
+            <cylinder length="0.01" radius="0.002"/>
+          </geometry>
+          <origin rpy="0 0 0" xyz="0 0 0"/>
+      <material name="arm_2"/>
+        </visual>
+      </link>
 
-  <link name="fork" > 
+
+ <joint name="arm_2_to axis_arm_2" type="fixed">
+    <parent link="arm_2"/>
+    <child link="axis_arm_2"/>
+    <axis xyz="0 0 1" />
+    <origin xyz="0 -0.05327 -0.01067" rpy= "${202.5*pi/180} 0 0"/>
+ </joint>
+
+
+    <link name="plat_superior">
     <visual>
-      <origin xyz="0 0 0" rpy="0 0 0" />
+      <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://robot/meshes/fork.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://robot/meshes/plat_superior.stl" scale="0.001 0.001 0.001"/>
       </geometry>
-      <material name="motor">
-      </material>
+          <material name="arm_2">
+        <color rgba="${150/255} ${150/255} ${50/255} 1.0"/>
+     </material>
     </visual>
   </link>
 
-     <joint name="rev_3" type="revolute">
-    <parent link="arm_2"/>
-    <child link="fork"/>
-    <axis xyz="0 0 1"/>
-    <origin xyz="0 0 0" rpy= "${90*pi/180} 0 0"/>
-    <limit effort="100000" lower="${-45*pi/180}" upper="${45*pi/180}" velocity="${2*pi}"/>
-    <dynamics friction="0.01" damping="0.001"/>
-  </joint>
+     <joint name="plat_superior_joint" type="fixed">
+     <parent link="axis_arm_2"/>
+     <child link="plat_superior"/>
+     <axis xyz="0 1 0 "/>
+     <origin xyz="0 0 0.13855" rpy= "${247.5*pi/180} 0 0"/>
+    </joint>
+
+
    
 </robot>
