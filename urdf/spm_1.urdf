@@ -184,7 +184,7 @@
 
  <xacro:macro name="wheel_assembly" params="name parent *origin">
 
-  <joint name="${name}" type="fixed" >
+  <joint name="${name}" type="fixed" >  <!-- sempre ha d'esser fixed en una xacro el primer link?-->
     <parent link="${parent}"/>
     <child link="${name}_centre_esfera"/>
     <xacro:insert_block name="origin"/>
