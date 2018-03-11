@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<launch>
+
+	<arg name="joint_state_publisher_gui" default="false" doc="Sets true or false the gui parameter" />
+	<arg name="load_rviz" default="false" doc="Open rviz with the global configuration" />
+	<arg name="simulate_robot" default="false" doc="Launches simulation on gazebo" />
+
+	<param name="robot_description" command="$(find xacro)/xacro --inorder $(find robot)/robot/revolver_robot.urdf" />
+	<node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
+		<param name="use_gui" value="$(arg joint_state_publisher_gui)" />
+		<rosparam param="source_list">[revolver_robot/joint_states]</rosparam>
+	</node>
+	<node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher" />
+	<group if="$(arg load_rviz)">
+		<node name="revolver_rviz" pkg="rviz" type="rviz" args="-d $(find robot)/rviz/urdf.rviz" />
+	</group>
+
+	<group if="$(arg simulate_robot)">
+		<param name="/revoler_robot/robot_description" command="$(find xacro)/xacro --inorder $(find robot)/robot/revolver_robot.urdf" />
+		<include file="$(find gazebo_ros)/launch/empty_world.launch">
+			<arg name="physics" value="ode" />
+			<arg name="world_name" value="$(find robot)/world/robot.world" />
+			<arg name="debug" value="false" />
+			<arg name="gui" value="true" />
+			<arg name="paused" value="false"/>
+			<arg name="use_sim_time" value="true"/>
+			<arg name="headless" value="false"/>
+		</include>
+		<node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen" args="-urdf -model revolver_robot -param robot_description -z 0.1"/>
+
+		<rosparam file="$(find robot)/config/controllers.yaml" command="load" />
+		<node ns="revolver_robot" name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false" output="screen" args="state_controller wheel_1_controller wheel_2_controller wheel_3_controller wheel_1_barrel_1_controller wheel_1_barrel_2_controller wheel_1_barrel_3_controller wheel_1_barrel_4_controller wheel_1_barrel_5_controller wheel_1_barrel_6_controller wheel_1_barrel_7_controller wheel_1_barrel_8_controller wheel_1_barrel_9_controller wheel_1_barrel_10_controller wheel_1_barrel_11_controller wheel_1_barrel_12_controller wheel_1_barrel_13_controller wheel_1_barrel_14_controller wheel_1_barrel_15_controller wheel_1_barrel_16_controller wheel_2_barrel_1_controller wheel_2_barrel_2_controller wheel_2_barrel_3_controller wheel_2_barrel_4_controller wheel_2_barrel_5_controller wheel_2_barrel_6_controller wheel_2_barrel_7_controller wheel_2_barrel_8_controller wheel_2_barrel_9_controller wheel_2_barrel_10_controller wheel_2_barrel_11_controller wheel_2_barrel_12_controller wheel_2_barrel_13_controller wheel_2_barrel_14_controller wheel_2_barrel_15_controller wheel_2_barrel_16_controller wheel_3_barrel_1_controller wheel_3_barrel_2_controller wheel_3_barrel_3_controller wheel_3_barrel_4_controller wheel_3_barrel_5_controller wheel_3_barrel_6_controller wheel_3_barrel_7_controller wheel_3_barrel_8_controller wheel_3_barrel_9_controller wheel_3_barrel_10_controller wheel_3_barrel_11_controller wheel_3_barrel_12_controller wheel_3_barrel_13_controller wheel_3_barrel_14_controller wheel_3_barrel_15_controller wheel_3_barrel_16_controller helix_orientation_controller" />
+
+		<!-- node name="play_joystic" pkg="joy" type="joy_node" output="screen">
+			<param name="dev" type="string" value="/dev/input/js0" />
+			<param name="deadzone" value="0.1" />
+		</node -->
+	</group>
+</launch>

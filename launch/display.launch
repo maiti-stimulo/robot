@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<launch>
+	<include file="$(find robot)/launch/dashboard.launch.xml">
+		<arg name="joint_state_publisher_gui" value="true" />
+		<arg name="load_rviz" default="true" />
+	</include>
+</launch>

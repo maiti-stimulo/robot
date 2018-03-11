@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<robot name="revolver_robot" xmlns:xacro="http://ros.org/wiki/xacro">
+	<xacro:include filename="$(find robot)/model/revolver.urdf.xacro" />
+	<xacro:revolver name="revolver_robot" />
+	<gazebo>
+		<plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+			<robotNamespace>revolver_robot</robotNamespace>
+		</plugin>
+	</gazebo>
+</robot>

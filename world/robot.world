@@ -1,44 +1,68 @@
 <?xml version="1.0" ?>
 <sdf version="1.4">
-  <!-- We use a custom world for the rrbot so that the camera angle is launched correctly -->
+	<world name="default">
+	<include>
+		<uri>model://ground_plane</uri>
+	</include>
 
-  <world name="default">
-    <include>
-      <uri>model://ground_plane</uri>
-    </include>
+	<include>
+		<uri>model://sun</uri>
+	</include>
 
-    <!-- Global light source -->
-    <include>
-      <uri>model://sun</uri>
-    </include>
+	<gui fullscreen='0'>
+		<camera name='user_camera'>
+		<pose>4.927360 -4.376610 3.740080 0.000000 0.275643 2.356190</pose>
+		<view_controller>orbit</view_controller>
+		</camera>
+	</gui>
 
-    <!-- Focus camera on tall pendulum -->
-    <gui fullscreen='0'>
-      <camera name='user_camera'>
-        <pose>4.927360 -4.376610 3.740080 0.000000 0.275643 2.356190</pose>
-        <view_controller>orbit</view_controller>
-      </camera>
-    </gui>
+	<!-- physics name="ode_70iters" type="ode">
+		<real_time_update_rate>1500</real_time_update_rate>
+		<ode>
+			<solver>
+				<type>quick</type>
+				<iters>70</iters>
+			</solver>
+		</ode>
+	</physics -->
 
-    <physics type='ode'>
-      <max_step_size>0.004</max_step_size>
-      <real_time_factor>1</real_time_factor>
-      <real_time_update_rate>0</real_time_update_rate>
-      <gravity>0 0 -9.8</gravity>
-      <ode>
-        <solver>
-          <type>quick</type>
-          <iters>50</iters>
-          <sor>0.8</sor>
-        </solver>
-        <constraints>
-          <cfm>0.0</cfm>
-          <erp>0.2</erp>
-          <contact_max_correcting_vel>0.1</contact_max_correcting_vel>
-          <contact_surface_layer>0.0</contact_surface_layer>
-        </constraints>
-  </ode>
-    </physics>
+	<!-- physics name="ode_200iters" type="ode" default="true">
+		<ode>
+			<solver>
+				<type>quick</type>
+				<iters>200</iters>
+			</solver>
+		</ode>
+	</physics>
+
+	<physics name="ode_500iters" type="ode">
+		<ode>
+			<solver>
+				<type>quick</type>
+				<iters>500</iters>
+			</solver>
+		</ode>
+	</physics -->
+
+	<physics type='ode'>
+		<max_step_size>0.002</max_step_size>
+		<real_time_factor>0.5</real_time_factor>
+		<real_time_update_rate>0</real_time_update_rate>
+		<gravity>0 0 -9.8</gravity>
+		<ode>
+			<solver>
+				<type>quick</type>
+				<iters>200</iters>
+				<sor>0.8</sor>
+			</solver>
+			<!-- constraints>
+				<cfm>0.0</cfm>
+				<erp>0.2</erp>
+				<contact_max_correcting_vel>0.1</contact_max_correcting_vel>
+				<contact_surface_layer>0.0</contact_surface_layer>
+			</constraints -->
+		</ode>
+	</physics>
 
   </world>
 </sdf>
