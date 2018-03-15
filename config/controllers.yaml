@@ -1,222 +1,221 @@
-robot: # namespace
+revolver_robot:
   state_controller:
      type: joint_state_controller/JointStateController
-     publish_rate: 50 # Hz, frequenia
+     publish_rate: 50
 
-  MY_WHEEL_ONE_CONTROLLER:
+  wheel_1_controller:
      type: effort_controllers/JointEffortController
-     joint: MY_WHEEL_ONE
+     joint: revolver_robot_wheel_1
 
-  MY_WHEEL_TWO_CONTROLLER:
+  wheel_2_controller:
      type: effort_controllers/JointEffortController
-     joint: MY_WHEEL_TWO
+     joint: revolver_robot_wheel_2
 
-  MY_WHEEL_THREE_CONTROLLER:
+  wheel_3_controller:
      type: effort_controllers/JointEffortController
-     joint: MY_WHEEL_THREE
+     joint: revolver_robot_wheel_3
 
-  MY_WHEEL_ONE_RODETA_1_CONTROLLER:
+  wheel_1_barrel_1_controller:
      type: effort_controllers/JointEffortController
-     joint: MY_WHEEL_ONE_rodeta_1_joint
+     joint: revolver_robot_wheel_1_barrel_1_joint
 
-  MY_WHEEL_ONE_RODETA_2_CONTROLLER:
+  wheel_1_barrel_2_controller:
      type: effort_controllers/JointEffortController
-     joint: MY_WHEEL_ONE_rodeta_2_joint
+     joint: revolver_robot_wheel_1_barrel_2_joint
 
-  MY_WHEEL_ONE_RODETA_3_CONTROLLER:
+  wheel_1_barrel_3_controller:
      type: effort_controllers/JointEffortController
-     joint: MY_WHEEL_ONE_rodeta_3_joint
+     joint: revolver_robot_wheel_1_barrel_3_joint
 
-  MY_WHEEL_ONE_RODETA_4_CONTROLLER:
+  wheel_1_barrel_4_controller:
      type: effort_controllers/JointEffortController
-     joint: MY_WHEEL_ONE_rodeta_4_joint
+     joint: revolver_robot_wheel_1_barrel_4_joint
 
-  MY_WHEEL_ONE_RODETA_5_CONTROLLER:
+  wheel_1_barrel_5_controller:
      type: effort_controllers/JointEffortController
-     joint: MY_WHEEL_ONE_rodeta_5_joint
+     joint: revolver_robot_wheel_1_barrel_5_joint
 
-  MY_WHEEL_ONE_RODETA_6_CONTROLLER:
+  wheel_1_barrel_6_controller:
      type: effort_controllers/JointEffortController
-     joint: MY_WHEEL_ONE_rodeta_6_joint
+     joint: revolver_robot_wheel_1_barrel_6_joint
 
-  MY_WHEEL_ONE_RODETA_7_CONTROLLER:
+  wheel_1_barrel_7_controller:
      type: effort_controllers/JointEffortController
-     joint: MY_WHEEL_ONE_rodeta_7_joint
+     joint: revolver_robot_wheel_1_barrel_7_joint
 
-  MY_WHEEL_ONE_RODETA_8_CONTROLLER:
+  wheel_1_barrel_8_controller:
      type: effort_controllers/JointEffortController
-     joint: MY_WHEEL_ONE_rodeta_8_joint
+     joint: revolver_robot_wheel_1_barrel_8_joint
 
-  MY_WHEEL_ONE_RODETA_9_CONTROLLER:
+  wheel_1_barrel_9_controller:
      type: effort_controllers/JointEffortController
-     joint: MY_WHEEL_ONE_rodeta_9_joint  
+     joint: revolver_robot_wheel_1_barrel_9_joint
 
-  MY_WHEEL_ONE_RODETA_10_CONTROLLER:
+  wheel_1_barrel_10_controller:
      type: effort_controllers/JointEffortController
-     joint: MY_WHEEL_ONE_rodeta_10_joint 
+     joint: revolver_robot_wheel_1_barrel_10_joint
 
-  MY_WHEEL_ONE_RODETA_11_CONTROLLER:
+  wheel_1_barrel_11_controller:
      type: effort_controllers/JointEffortController
-     joint: MY_WHEEL_ONE_rodeta_11_joint 
+     joint: revolver_robot_wheel_1_barrel_11_joint
 
-  MY_WHEEL_ONE_RODETA_12_CONTROLLER:
+  wheel_1_barrel_12_controller:
      type: effort_controllers/JointEffortController
-     joint: MY_WHEEL_ONE_rodeta_12_joint 
+     joint: revolver_robot_wheel_1_barrel_12_joint
 
-  MY_WHEEL_ONE_RODETA_13_CONTROLLER:
+  wheel_1_barrel_13_controller:
      type: effort_controllers/JointEffortController
-     joint: MY_WHEEL_ONE_rodeta_13_joint 
+     joint: revolver_robot_wheel_1_barrel_13_joint
 
-  MY_WHEEL_ONE_RODETA_14_CONTROLLER:
+  wheel_1_barrel_14_controller:
      type: effort_controllers/JointEffortController
-     joint: MY_WHEEL_ONE_rodeta_14_joint 
+     joint: revolver_robot_wheel_1_barrel_14_joint
 
-  MY_WHEEL_ONE_RODETA_15_CONTROLLER:
+  wheel_1_barrel_15_controller:
      type: effort_controllers/JointEffortController
-     joint: MY_WHEEL_ONE_rodeta_15_joint 
+     joint: revolver_robot_wheel_1_barrel_15_joint
 
-  MY_WHEEL_ONE_RODETA_16_CONTROLLER:
+  wheel_1_barrel_16_controller:
      type: effort_controllers/JointEffortController
-     joint: MY_WHEEL_ONE_rodeta_16_joint   
-   
-  MY_WHEEL_TWO_RODETA_1_CONTROLLER:
-     type: effort_controllers/JointEffortController
-     joint: MY_WHEEL_TWO_rodeta_1_joint
+     joint: revolver_robot_wheel_1_barrel_16_joint
 
-  MY_WHEEL_TWO_RODETA_2_CONTROLLER:
+  wheel_2_barrel_1_controller:
      type: effort_controllers/JointEffortController
-     joint: MY_WHEEL_TWO_rodeta_2_joint
+     joint: revolver_robot_wheel_2_barrel_1_joint
 
-  MY_WHEEL_TWO_RODETA_3_CONTROLLER:
+  wheel_2_barrel_2_controller:
      type: effort_controllers/JointEffortController
-     joint: MY_WHEEL_TWO_rodeta_3_joint
+     joint: revolver_robot_wheel_2_barrel_2_joint
 
-  MY_WHEEL_TWO_RODETA_4_CONTROLLER:
+  wheel_2_barrel_3_controller:
      type: effort_controllers/JointEffortController
-     joint: MY_WHEEL_TWO_rodeta_4_joint
+     joint: revolver_robot_wheel_2_barrel_3_joint
 
-  MY_WHEEL_TWO_RODETA_5_CONTROLLER:
+  wheel_2_barrel_4_controller:
      type: effort_controllers/JointEffortController
-     joint: MY_WHEEL_TWO_rodeta_5_joint
+     joint: revolver_robot_wheel_2_barrel_4_joint
 
-  MY_WHEEL_TWO_RODETA_6_CONTROLLER:
+  wheel_2_barrel_5_controller:
      type: effort_controllers/JointEffortController
-     joint: MY_WHEEL_TWO_rodeta_6_joint
+     joint: revolver_robot_wheel_2_barrel_5_joint
 
-  MY_WHEEL_TWO_RODETA_7_CONTROLLER:
+  wheel_2_barrel_6_controller:
      type: effort_controllers/JointEffortController
-     joint: MY_WHEEL_TWO_rodeta_7_joint
+     joint: revolver_robot_wheel_2_barrel_6_joint
 
-  MY_WHEEL_TWO_RODETA_8_CONTROLLER:
+  wheel_2_barrel_7_controller:
      type: effort_controllers/JointEffortController
-     joint: MY_WHEEL_TWO_rodeta_8_joint
+     joint: revolver_robot_wheel_2_barrel_7_joint
 
-  MY_WHEEL_TWO_RODETA_9_CONTROLLER:
+  wheel_2_barrel_8_controller:
      type: effort_controllers/JointEffortController
-     joint: MY_WHEEL_TWO_rodeta_9_joint  
+     joint: revolver_robot_wheel_2_barrel_8_joint
 
-  MY_WHEEL_TWO_RODETA_10_CONTROLLER:
+  wheel_2_barrel_9_controller:
      type: effort_controllers/JointEffortController
-     joint: MY_WHEEL_TWO_rodeta_10_joint 
+     joint: revolver_robot_wheel_2_barrel_9_joint
 
-  MY_WHEEL_TWO_RODETA_11_CONTROLLER:
+  wheel_2_barrel_10_controller:
      type: effort_controllers/JointEffortController
-     joint: MY_WHEEL_TWO_rodeta_11_joint 
+     joint: revolver_robot_wheel_2_barrel_10_joint
 
-  MY_WHEEL_TWO_RODETA_12_CONTROLLER:
+  wheel_2_barrel_11_controller:
      type: effort_controllers/JointEffortController
-     joint: MY_WHEEL_TWO_rodeta_12_joint 
+     joint: revolver_robot_wheel_2_barrel_11_joint
 
-  MY_WHEEL_TWO_RODETA_13_CONTROLLER:
+  wheel_2_barrel_12_controller:
      type: effort_controllers/JointEffortController
-     joint: MY_WHEEL_TWO_rodeta_13_joint 
+     joint: revolver_robot_wheel_2_barrel_12_joint
 
-  MY_WHEEL_TWO_RODETA_14_CONTROLLER:
+  wheel_2_barrel_13_controller:
      type: effort_controllers/JointEffortController
-     joint: MY_WHEEL_TWO_rodeta_14_joint 
+     joint: revolver_robot_wheel_2_barrel_13_joint
 
-  MY_WHEEL_TWO_RODETA_15_CONTROLLER:
+  wheel_2_barrel_14_controller:
      type: effort_controllers/JointEffortController
-     joint: MY_WHEEL_TWO_rodeta_15_joint 
+     joint: revolver_robot_wheel_2_barrel_14_joint
 
-  MY_WHEEL_TWO_RODETA_16_CONTROLLER:
+  wheel_2_barrel_15_controller:
      type: effort_controllers/JointEffortController
-     joint: MY_WHEEL_TWO_rodeta_16_joint    
+     joint: revolver_robot_wheel_2_barrel_15_joint
 
-  MY_WHEEL_THREE_RODETA_1_CONTROLLER:
+  wheel_2_barrel_16_controller:
      type: effort_controllers/JointEffortController
-     joint: MY_WHEEL_THREE_rodeta_1_joint
+     joint: revolver_robot_wheel_2_barrel_16_joint
 
-  MY_WHEEL_THREE_RODETA_2_CONTROLLER:
+  wheel_3_barrel_1_controller:
      type: effort_controllers/JointEffortController
-     joint: MY_WHEEL_THREE_rodeta_2_joint
+     joint: revolver_robot_wheel_3_barrel_1_joint
 
-  MY_WHEEL_THREE_RODETA_3_CONTROLLER:
+  wheel_3_barrel_2_controller:
      type: effort_controllers/JointEffortController
-     joint: MY_WHEEL_THREE_rodeta_3_joint
+     joint: revolver_robot_wheel_3_barrel_2_joint
 
-  MY_WHEEL_THREE_RODETA_4_CONTROLLER:
+  wheel_3_barrel_3_controller:
      type: effort_controllers/JointEffortController
-     joint: MY_WHEEL_THREE_rodeta_4_joint
+     joint: revolver_robot_wheel_3_barrel_3_joint
 
-  MY_WHEEL_THREE_RODETA_5_CONTROLLER:
+  wheel_3_barrel_4_controller:
      type: effort_controllers/JointEffortController
-     joint: MY_WHEEL_THREE_rodeta_5_joint
+     joint: revolver_robot_wheel_3_barrel_4_joint
 
-  MY_WHEEL_THREE_RODETA_6_CONTROLLER:
+  wheel_3_barrel_5_controller:
      type: effort_controllers/JointEffortController
-     joint: MY_WHEEL_THREE_rodeta_6_joint
+     joint: revolver_robot_wheel_3_barrel_5_joint
 
-  MY_WHEEL_THREE_RODETA_7_CONTROLLER:
+  wheel_3_barrel_6_controller:
      type: effort_controllers/JointEffortController
-     joint: MY_WHEEL_THREE_rodeta_7_joint
+     joint: revolver_robot_wheel_3_barrel_6_joint
 
-  MY_WHEEL_THREE_RODETA_8_CONTROLLER:
+  wheel_3_barrel_7_controller:
      type: effort_controllers/JointEffortController
-     joint: MY_WHEEL_THREE_rodeta_8_joint   
+     joint: revolver_robot_wheel_3_barrel_7_joint
 
-  MY_WHEEL_THREE_RODETA_9_CONTROLLER:
+  wheel_3_barrel_8_controller:
      type: effort_controllers/JointEffortController
-     joint: MY_WHEEL_THREE_rodeta_9_joint  
+     joint: revolver_robot_wheel_3_barrel_8_joint
 
-  MY_WHEEL_THREE_RODETA_10_CONTROLLER:
+  wheel_3_barrel_9_controller:
      type: effort_controllers/JointEffortController
-     joint: MY_WHEEL_THREE_rodeta_10_joint 
+     joint: revolver_robot_wheel_3_barrel_9_joint
 
-  MY_WHEEL_THREE_RODETA_11_CONTROLLER:
+  wheel_3_barrel_10_controller:
      type: effort_controllers/JointEffortController
-     joint: MY_WHEEL_THREE_rodeta_11_joint 
+     joint: revolver_robot_wheel_3_barrel_10_joint
 
-  MY_WHEEL_THREE_RODETA_12_CONTROLLER:
+  wheel_3_barrel_11_controller:
      type: effort_controllers/JointEffortController
-     joint: MY_WHEEL_THREE_rodeta_12_joint 
+     joint: revolver_robot_wheel_3_barrel_11_joint
 
-  MY_WHEEL_THREE_RODETA_13_CONTROLLER:
+  wheel_3_barrel_12_controller:
      type: effort_controllers/JointEffortController
-     joint: MY_WHEEL_THREE_rodeta_13_joint 
+     joint: revolver_robot_wheel_3_barrel_12_joint
 
-  MY_WHEEL_THREE_RODETA_14_CONTROLLER:
+  wheel_3_barrel_13_controller:
      type: effort_controllers/JointEffortController
-     joint: MY_WHEEL_THREE_rodeta_14_joint 
+     joint: revolver_robot_wheel_3_barrel_13_joint
 
-  MY_WHEEL_THREE_RODETA_15_CONTROLLER:
+  wheel_3_barrel_14_controller:
      type: effort_controllers/JointEffortController
-     joint: MY_WHEEL_THREE_rodeta_15_joint 
+     joint: revolver_robot_wheel_3_barrel_14_joint
 
-  MY_WHEEL_THREE_RODETA_16_CONTROLLER:
+  wheel_3_barrel_15_controller:
      type: effort_controllers/JointEffortController
-     joint: MY_WHEEL_THREE_rodeta_16_joint  
+     joint: revolver_robot_wheel_3_barrel_15_joint
 
-  HELIX_ORIENTATION_CONTROLLER:
+  wheel_3_barrel_16_controller:
+     type: effort_controllers/JointEffortController
+     joint: revolver_robot_wheel_3_barrel_16_joint
+
+  helix_orientation_controller:
      type: position_controllers/JointTrajectoryController
-     joints: 
-      - rev1
-      - rev2
+     joints:
+      - revolver_robot_arm_1_proximal_joint
+      - revolver_robot_arm_2_proximal_joint
+      - revolver_robot_arm_3_proximal_joint
 
-  TOP_PROPELLER_CONTROLLER:
-     type: velocity_controllers/JointVelocityController
-     joint: top_propeller  
-
-  BOTTOM_PROPELLER_CONTROLLER:
-     type: velocity_controllers/JointVelocityController
-     joint: bottom_propeller       
+  propeller_controller:
+     type: velocity_controllers/JointGroupVelocityController
+     joints:
+       - revolver_robot_top_propeller_joint,
+       - revolver_robot_bottom_propeller_joint,
